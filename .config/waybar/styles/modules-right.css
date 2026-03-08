@@ -1,0 +1,113 @@
+/*----------------
+    media info
+----------------*/
+
+#mpris {
+	padding: 0 12px;
+}
+
+/*------------
+    volume
+------------*/
+
+#custom-left_div.6 {
+	color: @volume;
+}
+#pulseaudio,
+#wireplumber {
+	background-color: @volume;
+}
+
+/*----------------
+    brightness
+----------------*/
+
+#custom-left_div.7 {
+	background-color: @volume;
+	color: @backlight;
+}
+#backlight {
+	background-color: @backlight;
+}
+
+/*-------------
+    battery
+-------------*/
+
+#custom-left_div.8 {
+	background-color: @backlight;
+	color: @battery;
+}
+#battery {
+	background-color: @battery;
+}
+#custom-left_inv.2 {
+	color: @battery;
+}
+
+/*---------------------------
+    Apps (steam and other)
+ --------------------------*/
+#custom-telegram {
+  background-color: @apps;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#custom-telegram.running {
+  color: @accent;
+}
+
+#custom-ollama {
+  background-color: @apps;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#custom-ollama.running {
+  color: @accent;
+}
+
+#custom-steam {
+  background-color: @apps;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#custom-steam.running {
+  color: @accent;
+}
+
+/*----------------
+    power menu
+----------------*/
+/* The main container */
+#group-peripherals {
+    background-color: @accent;
+    border-radius: 12px;
+    /* Remove padding here so the inner buttons touch the edges */
+    padding: 0; 
+    margin: 0 5px;
+}
+
+#custom-keyboard {
+  background-color: @battery
+}
+
+#custom-mouse {
+  background-color: @battery
+}
+
+#upower {
+  color: @accent;
+  background-color: @battery;
+}
+
+#custom-power_menu {
+	border-radius: 16px;
+	padding: 0 19px 0 16px;
+	color: @accent;
+}
+#custom-power_menu:hover {
+	background-color: @hover-bg;
+}

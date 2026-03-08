@@ -1,0 +1,72 @@
+/*--------------
+    username
+--------------*/
+
+#custom-user {
+	padding-right: 12px;
+}
+
+/*-----------
+    power
+-----------*/
+
+#custom-shutdown {
+	padding-right: 12px;
+}
+#custom-shutdown:hover {
+  color: @accent;
+}
+
+#custom-reboot {
+  padding-right: 12px;
+}
+#custom-reboot:hover {
+  color: @accent;
+}
+
+#custom-suspend {
+  padding-right: 12px;
+}
+#custom-suspend:hover {
+  color: @accent;
+}
+
+#custom-close_hyprland {
+  padding-right: 12px;
+}
+#custom-close_hyprland:hover {
+  color: @accent;
+}
+
+/*----------------
+    workspaces
+----------------*/
+
+#custom-left_div.1,
+#custom-right_div.1 {
+	color: @workspaces;
+}
+#workspaces {
+	padding: 0 1px;
+	background-color: @workspaces;
+}
+#workspaces button {
+	border-radius: 2px;
+	min-width: 16px;
+	padding: 0 10px;
+}
+#workspaces button:hover {
+	background-color: @accent;
+	color: @hover-fg;
+}
+#workspaces button.active label {
+	color: @accent;
+}
+
+/*------------------
+    window title
+------------------*/
+
+#window {
+	margin-left: 12px;
+}

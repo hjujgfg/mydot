@@ -1,0 +1,201 @@
+/*------------------
+    window count
+------------------*/
+
+#windowcount {
+	margin-right: 12px;
+  padding-left: 70px; /* this is to keep the center icon in the center */
+}
+#windowcount label {
+	color: @hover-fg;
+}
+
+/*-----------------
+    temperature
+-----------------*/
+
+#custom-left_div.2 {
+	color: @temperature;
+}
+#temperature {
+	background-color: @temperature;
+}
+
+#custom-temps {
+  background-color: @temperature;
+  padding-left: 6px;
+  padding-right: 12px;
+}
+
+/*-----------------
+    gpu temperature
+-----------------*/
+
+#custom-gpu_temperature {
+	background-color: @temperature;
+  padding-right: 6px;
+}
+
+#custom-gpu_temperature.gpu-cool  { color: @text; }  /* green */
+#custom-gpu_temperature.gpu-warm  { color: @yellow; }  /* yellow */
+#custom-gpu_temperature.gpu-hot   { color: @red; }  /* red */
+#custom-gpu_temperature.gpu-unknown { opacity: 0.5; }
+
+/*------------
+    memory
+------------*/
+
+#custom-left_div.3 {
+	background-color: @temperature;
+	color: @memory;
+}
+#memory {
+	background-color: @memory;
+}
+
+/*---------
+    cpu
+---------*/
+
+#custom-left_div.4 {
+	background-color: @memory;
+	color: @cpu;
+}
+#cpu {
+	background-color: @cpu;
+}
+
+#custom-left_inv.1 {
+	color: @cpu;
+}
+
+/*-----------------
+    distro icon
+-----------------*/
+
+#custom-left_div.5,
+#custom-right_div.2 {
+	color: @accent;
+}
+#custom-distro {
+	padding: 0 10px 0 5px;
+	background-color: @accent;
+	color: @main-bg;
+}
+
+/*--------------------
+    idle inhibitor
+--------------------*/
+
+#custom-right_inv.1 {
+	color: @time;
+}
+#idle_inhibitor {
+	background-color: @time;
+}
+
+/*----------
+    time
+----------*/
+
+#clock.time {
+	padding-right: 0px;
+  padding-left: 0px;
+	background-color: @time;
+}
+#custom-right_div.3 {
+	background-color: @date;
+	color: @time;
+}
+
+/*----------
+    date
+----------*/
+
+#clock.date {
+	padding-left: 6px;
+	background-color: @date;
+}
+#custom-right_div.4 {
+	background-color: @tray;
+	color: @date;
+}
+
+/*-----------------
+    system tray
+-----------------*/
+
+#network {
+	background-color: @tray;
+	padding: 0 6px 0 4px;
+}
+
+#custom-vpn {
+  background-color: @tray;
+  padding: 0 6px 0 4px;
+  transition: all 0.3s ease;
+}
+
+#custom-vpn:hover {
+  /*box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);*/
+  color: @hover-fg;
+}
+
+#custom-vpn.running {
+  color: @accent;
+}
+
+#custom-tailscale {
+  background-color: @tray;
+  padding: 0 6px 0 4px;
+}
+
+#custom-tailscale:hover {
+  color: @hover-fg;
+}
+
+#custom-tailscale.up {
+  color: @accent;
+}
+
+#bluetooth {
+	background-color: @tray;
+	padding: 0 5px;
+}
+#custom-system_update {
+	background-color: @tray;
+	padding: 0 8px 0 2px;
+}
+#custom-right_div.5 {
+	color: @tray;
+}
+
+
+/*------------------
+    Keyboard layout
+ * ---------------*/
+
+#language {
+  padding-left: 6px;
+}
+
+#language.en {
+  color: @accent;
+}
+
+#language:hover {
+  color: @hover-fg;
+}
+
+#custom-language {
+  padding-left: 6px;
+}
+
+#custom-language.ru {
+  color: @red;
+}
+
+#custom-language.en {
+  color: @yellow;
+}
+
