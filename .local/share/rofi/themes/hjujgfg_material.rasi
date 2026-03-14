@@ -79,6 +79,7 @@ case-indicator {
 mode-switcher, message {
 	border: 1px 0;
 	border-color: @base0D;
+  border-radius: 12px;
 }
 
 button, textbox {
@@ -89,6 +90,7 @@ button, textbox {
 
 button selected {
 	background-color: @base0D;
+  text-color: @base00;
 }
 
 listview {
@@ -124,13 +126,14 @@ element normal {
 element selected {
 	background-color: @base0D;
 	border-radius: 12px;
+  text-color: @base00;
 }
 
 element alternate {
 	/*background-color: @base03;*/
 }
 
-element normal normal, element selected normal, element alternate normal {
+element normal normal, element alternate normal {
 	text-color: @base07;
 }
 
