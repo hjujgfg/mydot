@@ -2,56 +2,19 @@
     username
 --------------*/
 
-#custom-user {
-	padding-right: 12px;
-}
-
 /*-----------
     power
 -----------*/
-
-#custom-shutdown {
-	padding-right: 12px;
-}
-#custom-shutdown:hover {
-  color: @accent;
-}
-
-#custom-reboot {
-  padding-right: 12px;
-}
-#custom-reboot:hover {
-  color: @accent;
-}
-
-#custom-suspend {
-  padding-right: 12px;
-}
-#custom-suspend:hover {
-  color: @accent;
-}
-
-#custom-close_hyprland {
-  padding-right: 12px;
-}
-#custom-close_hyprland:hover {
-  color: @accent;
-}
 
 /*----------------
     workspaces
 ----------------*/
 
-#custom-left_div.1,
-#custom-right_div.1 {
-	color: @workspaces;
-}
 #workspaces {
 	padding: 0 1px;
-	background-color: @workspaces;
 }
 #workspaces button {
-	border-radius: 2px;
+	border-radius: 12px;
 	min-width: 16px;
 	padding: 0 10px;
 }
@@ -63,10 +26,47 @@
 	color: @accent;
 }
 
+/* The main container */
+#group-peripherals {
+}
+
+/*-----------------
+    temperature
+-----------------*/
+
+#custom-temps {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/*---------------------
+    gpu temperature
+----------------------*/
+
+#custom-gpu_temperature {
+  border-radius: 12px;
+}
+
+#custom-gpu_temperature.gpu-cool  { color: @text; }  /* green */
+#custom-gpu_temperature.gpu-warm  { color: @yellow; }  /* yellow */
+#custom-gpu_temperature.gpu-hot   { color: @red; }  /* red */
+#custom-gpu_temperature.gpu-unknown { opacity: 0.5; }
+
+/*------------
+    memory
+------------*/
+
+#memory {
+}
+
+/*---------
+    cpu
+---------*/
+
+#cpu {
+}
+
 /*------------------
     window title
 ------------------*/
 
-#window {
-	margin-left: 12px;
-}

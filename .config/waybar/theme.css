@@ -46,6 +46,9 @@
 @define-color accent        @sky; /*prev: lavender*/
 @define-color main-br       @subtext0;
 @define-color main-bg       @nord0; /*prev: crust*/
+@define-color bg-one        @nord1;
+@define-color bg-two        @nord2;
+@define-color bg-three      @nord3;
 @define-color main-fg       @text; /*it was text*/
 @define-color hover-bg      @base;
 @define-color hover-fg      alpha(@main-fg, 0.75);

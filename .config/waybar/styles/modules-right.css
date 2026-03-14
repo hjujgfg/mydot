@@ -15,41 +15,67 @@
 }
 #pulseaudio,
 #wireplumber {
-	background-color: @volume;
 }
 
 /*----------------
     brightness
 ----------------*/
 
-#custom-left_div.7 {
-	background-color: @volume;
-	color: @backlight;
+
+/*-----------------
+    system tray
+-----------------*/
+
+#network {
+	padding: 0 6px 0 4px;
 }
-#backlight {
-	background-color: @backlight;
+
+#custom-vpn {
+  padding: 0 6px 0 4px;
+  transition: all 0.3s ease;
+}
+
+#custom-vpn:hover {
+  /*box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);*/
+  color: @hover-fg;
+}
+
+#custom-vpn.running {
+  color: @accent;
+}
+
+#custom-tailscale {
+  padding: 0 6px 0 4px;
+}
+
+#custom-tailscale:hover {
+  color: @hover-fg;
+}
+
+#custom-tailscale.up {
+  color: @accent;
+}
+
+#bluetooth {
+	padding: 0 5px;
+}
+
+#custom-system_update {
+	padding: 0 8px 0 2px;
 }
 
 /*-------------
     battery
 -------------*/
 
-#custom-left_div.8 {
-	background-color: @backlight;
-	color: @battery;
-}
 #battery {
 	background-color: @battery;
-}
-#custom-left_inv.2 {
-	color: @battery;
 }
 
 /*---------------------------
     Apps (steam and other)
  --------------------------*/
 #custom-telegram {
-  background-color: @apps;
   padding-left: 6px;
   padding-right: 6px;
 }
@@ -59,7 +85,6 @@
 }
 
 #custom-ollama {
-  background-color: @apps;
   padding-left: 6px;
   padding-right: 6px;
 }
@@ -69,7 +94,6 @@
 }
 
 #custom-steam {
-  background-color: @apps;
   padding-left: 6px;
   padding-right: 6px;
 }
@@ -81,27 +105,7 @@
 /*----------------
     power menu
 ----------------*/
-/* The main container */
-#group-peripherals {
-    background-color: @accent;
-    border-radius: 12px;
-    /* Remove padding here so the inner buttons touch the edges */
-    padding: 0; 
-    margin: 0 5px;
-}
 
-#custom-keyboard {
-  background-color: @battery
-}
-
-#custom-mouse {
-  background-color: @battery
-}
-
-#upower {
-  color: @accent;
-  background-color: @battery;
-}
 
 #custom-power_menu {
 	border-radius: 16px;

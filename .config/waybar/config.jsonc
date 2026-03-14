@@ -20,75 +20,80 @@
 	    layout
 	------------*/
 
-	"modules-left": [
-		"group/user",
-		"custom/left_div#1",
-		"hyprland/workspaces",
-		"custom/right_div#1",
-		"hyprland/window"
-	],
-	"modules-center": [
-		"hyprland/windowcount",
-		"custom/left_div#2",
-		// "temperature",
-    "custom/temps",
-    "custom/gpu_temperature",
-		"custom/left_div#3",
-		"memory",
-		"custom/left_div#4",
-		"cpu",
-		"custom/left_inv#1",
-		"custom/left_div#5",
-		"custom/distro",
-		"custom/right_div#2",
-		"custom/right_inv#1",
-		// "idle_inhibitor",
-		"clock#time",
-		"custom/right_div#3",
-		"clock#date",
-		"custom/right_div#4",
-		"network",
-    "custom/vpn",
-    "custom/tailscale",
-		"bluetooth",
-		"custom/system_update",
-		"custom/right_div#5",
-		"custom/language"
-	],
-	"modules-right": [
-		"mpris",
-		"custom/left_div#6",
-		"group/pulseaudio",
-		"custom/left_div#7",
-		//"backlight",
-		//"custom/left_div#8",
-		//"custom/left_inv#2",
-		//"custom/notification",
-    "custom/telegram",
-    "custom/ollama",
-    "custom/steam",
-		"custom/left_div#8",
-    "group/peripherals",
-    "upower",
-		"custom/left_inv#2",
-		"custom/notification"
-	],
-
+ 
 	/*-------------
 	    options
 	-------------*/
 
-	"layer": "top",
+  "layer": "top",
+  "height": 0,
+  "width": 0,
+  "margin": 4,
+  "spacing": 0,
+  "mode": "dock",
+  "fixed-center": true,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "group/user",
+    "hyprland/workspaces",
+    "group/hardware",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "custom/language",
+    "clock#time",
+    "clock#date"
+  ],
+  "modules-right": [
+    "mpris",
+    "group/connections",
+    "group/pulseaudio",
+    "group/apps",
+    "group/peripherals",
+    "custom/system_update",
+    "custom/notification"
+  ],
+
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "custom/temps",
+      "custom/gpu_temperature"
+    ]
+  },
+
+  "group/connections": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "custom/vpn",
+      "custom/tailscale",
+      "bluetooth"
+    ]
+  },
+
+  "group/apps": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/telegram",
+      "custom/ollama",
+      "custom/steam"
+    ]
+  },
+	// "layer": "top",
 	// "output":
 	// "position":
-	"height": 0,
-	"width": 0,
-	"margin": 0,
+	// "height": 0,
+	// "width": 0,
+	// "margin": 0,
 	// "margin-top":
 	// "margin-left":
 	// "margin-bottom":
 	// "margin-right":
-	"spacing": 0,
+	// "spacing": 0,
 	// "name":
 	"mode": "dock",
 	// "start_hidden":"$HOME/.config/waybar/scripts/gpu-temp.sh",
@@ -156,7 +161,7 @@
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
-			"active": "",
+			"active": "󱓻",
 			"default": ""
 		},
 		"persistent-workspaces": {
@@ -472,7 +477,7 @@
   "group/peripherals": {
     "orientation": "horizontal",
     "modules": [
-      "custom/keyboard",
+      // "custom/keyboard",
       "custom/mouse"
     ],
     "drawer": {

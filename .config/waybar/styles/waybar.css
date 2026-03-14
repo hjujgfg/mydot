@@ -1,20 +1,37 @@
 #waybar {
-	background-color: @outline;
-}
-#waybar > box {
-	margin: 4px;
-	background-color: @main-bg;
+  background-color: transparent;
+  border: none;
 }
 
-/*--------------
-    tooltips
---------------*/
+/* This targets all top-level modules and groups to turn them into pills */
+.modules-left > widget > *,
+.modules-center > widget > *,
+.modules-right > widget > * {
+  background-color: @main-bg;
+  border-radius: 12px;
+  margin: 4px 6px;
+  padding: 2px 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px; /* Optional: adds depth to the pills */
+}
+
+/* Optional: Highlight specific pills with a different Nord color */
+.modules-center > widget > * {
+  background-color: @bg-one; 
+}
+
+/* Clean up internal spacing for grouped modules */
+box > widget {
+  margin: 0;
+  padding: 0;
+}
+
 
 tooltip {
-	border: 2px solid @main-br;
-	border-radius: 10px;
-	background-color: @main-bg;
+  border: 2px solid @bg-two;
+  border-radius: 10px;
+  background-color: @main-bg;
 }
+
 tooltip > box {
-	padding: 0 6px;
+  padding: 4px 8px;
 }
