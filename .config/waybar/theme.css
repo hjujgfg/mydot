@@ -53,10 +53,10 @@
 
 /* module colors */
 
-@define-color workspaces    @nord1; /*prev: mantle*/
+@define-color workspaces    @nord1;
 @define-color temperature   @nord1;
-@define-color memory        @nord2; /*prev: base*/
-@define-color cpu           @nord3; /*prev: surface0*/
+@define-color memory        @nord2;
+@define-color cpu           @nord3;
 @define-color time          @nord3;
 @define-color date          @nord2;
 @define-color tray          @nord1;
