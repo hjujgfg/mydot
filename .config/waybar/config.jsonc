@@ -117,12 +117,7 @@
 	"group/user": {
 		"orientation": "horizontal",
 		"modules": [
-			"custom/trigger",
-			// "custom/user"
-      "custom/shutdown",
-      "custom/reboot",
-      "custom/suspend",
-      "custom/close_hyprland",
+			"custom/trigger"
 		],
 		"drawer": {}
 	},
@@ -130,8 +125,9 @@
 		"format": "󰍜",
 		"min-length": 4,
 		"max-length": 4,
-		"tooltip": false
-	},
+		"tooltip": false,
+    "on-click": "pkill rofi || rofi -show drun"
+  },
 	"custom/user": {
 		"exec": "id -un",
 		"format": "{}",

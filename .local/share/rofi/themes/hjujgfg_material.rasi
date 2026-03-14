@@ -26,6 +26,8 @@
 	base0D: #89DCEB; // #82AAFF
 	base0E: #C792EA;
 	base0F: #FF5370;
+  main-bg:#2E3440AA;
+  main-bg-no-alpha: #2E3440;
 
 	/*base0D: #00BCD4;*/
 
@@ -37,7 +39,7 @@
 window {
 	transparency: "real";
 	// background-color: #263238CC; /*base00 + CC (80% opacity)*/
-	background-color: #2e3440AA;
+	background-color: @main-bg;
 	border-radius: 12px;
 	border: 0px;
 
@@ -126,7 +128,7 @@ element normal {
 element selected {
 	background-color: @base0D;
 	border-radius: 12px;
-  text-color: @base00;
+  text-color: @main-bg;
 }
 
 element alternate {
