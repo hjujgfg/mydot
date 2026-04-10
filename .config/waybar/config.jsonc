@@ -158,7 +158,8 @@
 		"format": "{icon}",
 		"format-icons": {
 			"active": "󱓻",
-			"default": ""
+			"default": "",
+      "hover": "&"
 		},
 		"persistent-workspaces": {
 			"*": 5
@@ -540,8 +541,8 @@
     "return-type": "json",
     "interval": 5,
     "format": "{text}",
-    "on-click": "kitty -e ollama run gpt-oss:20b &",
-    "on-click-right": "ollama stop gpt-oss:20b"
+    "on-click": "kitty -e ollama run my-gemma4:26b &",
+    "on-click-right": "ollama stop my-gemma4:26b"
   },
 
   "custom/steam": {

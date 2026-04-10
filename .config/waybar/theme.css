@@ -1,3 +1,5 @@
+/* importing wallust generated ones */
+@import "wallpaper.css";
 /* catppuccin-mocha */
 
 @define-color rosewater     #f5e0dc;
@@ -42,13 +44,15 @@
 */
 
 /* main colors */
-
-@define-color accent        @sky; /*prev: lavender*/
+/*prev: sky*/
+@define-color accent        @wallpaper_accent;
 @define-color main-br       @subtext0;
-@define-color main-bg       @nord0; /*prev: crust*/
-@define-color bg-one        @nord1;
-@define-color bg-two        @nord2;
-@define-color bg-three      @nord3;
+/*nord0*/
+@define-color main-bg       @wallpaper_dark0;
+
+@define-color bg-one        @wallpaper_dark1;
+@define-color bg-two        @wallpaper_dark2;
+@define-color bg-three      @wallpaper_dark3;
 @define-color main-fg       @text; /*it was text*/
 @define-color hover-bg      @base;
 @define-color hover-fg      alpha(@main-fg, 0.75);
@@ -56,17 +60,17 @@
 
 /* module colors */
 
-@define-color workspaces    @nord1;
-@define-color temperature   @nord1;
-@define-color memory        @nord2;
-@define-color cpu           @nord3;
-@define-color time          @nord3;
-@define-color date          @nord2;
-@define-color tray          @nord1;
-@define-color volume        @nord1;
-@define-color backlight     @nord2;
-@define-color battery       @nord3;
-@define-color apps          @nord2;
+@define-color workspaces    @bg-one;
+@define-color temperature   @bg-one;
+@define-color memory        @bg-two;
+@define-color cpu           @bg-two;
+@define-color time          @bg-three;
+@define-color date          @bg-two;
+@define-color tray          @bg-one;
+@define-color volume        @bg-one;
+@define-color backlight     @bg-two;
+@define-color battery       @bg-three;
+@define-color apps          @bg-two;
 
 /* state colors */
 
