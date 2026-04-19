@@ -1,0 +1,17 @@
+# ~/.config/wallust/wallust.toml
+
+# How the image is processed (dark16 is a safe, high-contrast algorithm)
+backend = "wal" 
+color_space = "lab"
+palette = "harddark16" 
+
+# Define the Waybar entr
+[templates]
+waybar = { src = "waybar-colors.css", dst = '~/.config/waybar/wallpaper.css' }
+rofi = { src = "rofi-colors.rasi", dst = '~/.local/share/rofi/themes/wallpaper.rasi' }
+hyprland = { src = "hyprland-colors.conf", dst = '~/.config/hypr/hyprland-colors.conf' }
+swaync = { src = "swaync-colors.css", dst = '~/.config/swaync/swaync-colors.css' }
+# Define the Rofi entry
+# [[entry]]
+# template = "rofi-colors.rasi"
+# target = "~/.local/share/rofi/themes/accent.rasi"

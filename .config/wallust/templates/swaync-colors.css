@@ -1,0 +1,5 @@
+@define-color background {{color1}};
+@define-color background-alpha rgba({{color1 | rgb}}, 0.8);
+@define-color background-light {{color9}};
+@define-color accent {{color14}};
+

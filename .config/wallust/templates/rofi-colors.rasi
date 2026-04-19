@@ -1,0 +1,13 @@
+* {
+  main-bg:          {{color1}}AA;
+  main-bg-no-alpha: {{color1}};
+  bg1:              {{color9}};
+  bg2:              {{color0}};
+  bg3:              {{color8}};
+  accent:           {{color14}};
+  main-fg:          {{color7}};
+  fg-inverse:       {{color0}};
+
+	spacing: 0;
+	background-color: transparent;
+}
