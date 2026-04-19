@@ -1,0 +1,103 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "positionX": "center",
+  "positionY": "top",
+  "control-center-positionX": "right",
+  "control-center-positionY": "top",
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 8,
+  "control-center-margin-left": 8,
+  "control-center-width": 500,
+  "control-center-height": -1,
+  "fit-to-screen": false,
+  "layer-shell-cover-screen": true,
+
+  "layer-shell": true,
+  "layer": "overlay",
+  "control-center-layer": "overlay",
+  "cssPriority": "user",
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "notification-inline-replies": true,
+  "timeout": 3,
+  "timeout-low": 1,
+  "timeout-critical": 0,
+  "notification-window-width": 500,
+  "keyboard-shortcuts": true,
+  "image-visibility": "always",
+  "transition-time": 200,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+
+  "widgets": [
+    "inhibitors",
+    "buttons-grid",
+    "dnd",
+    "volume",
+    "mpris",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "notifications": {
+      "vexpand": false
+    },
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear All",
+      "clear-all-button": true
+    },
+    "buttons-grid" : {
+      "actions": [
+        {
+          "label": "",
+          "command": "systemctl poweroff"
+        },
+        {
+          "label": "",
+          "command": "systemctl reboot"
+        },
+        {
+          "label": "",
+          "command": "swaync-client -t && ~/.config/hypr/scripts/trigger_sleep.sh" 
+        },
+        {
+          "label": "",
+          "command": "swaync-client -t && hyprlock"
+        }
+      ]
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": false,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label Text"
+    },
+    "mpris": {
+      "autohide": true
+    },
+    "volume": {
+      "text": "Volume"
+    }
+  }
+  /*
+  "scripts": {
+    "ignored-apps-kb-layout": {
+      "exec": "sleep 0.5 && swaync-client --close-latest",
+      "app-name": "kb-layout"
+    },
+    "ignored-apps-volume": {
+      "exec": "sleep 1 && swaync-client --close-latest",
+      "app-name": "volume"
+    }
+  }*/
+}

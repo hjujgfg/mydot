@@ -1,0 +1,184 @@
+/*
+@define-color background rgb(46, 52, 64);
+@define-color background-alpha rgba(46, 52, 64, 0.8);
+@define-color background-light rgba(59, 66, 82, 1);
+@define-color accent rgb(137, 220, 235); 
+*/
+@import "swaync-colors.css";
+
+:root {
+  --border-radius: 22px;
+  --cc-bg: transparent;
+
+  --widget-background: @background-alpha;
+  --noti-bg-alpha: 0.6;
+
+  --padding: calc(var(--border-radius) / 2);
+}
+
+.notification {
+  background: @background-alpha;
+  transition: all 0.15s ease-in-out;
+}
+
+/* kb-layout stuff does not seem to work! */
+.notification.kb-layout {
+  background: @accent;
+}
+
+/* 1. Target the specific notification class */
+.notification-content.kb-layout {
+    /* Override standard width settings */
+    min-width: 0px; 
+    /* width: auto; */
+    
+    /* Make it a small square/circle */
+    padding: 10px;
+    border-radius: 12px; /* Or 50% for a circle */
+    
+    /* Center the contents */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+/* 2. Hide the text elements inside THIS notification only */
+.notification-content.kb-layout .summary,
+.notification-content.kb-layout .body,
+.notification-content.kb-layout .time,
+.notification-content.kb-layout .close-button {
+    /*display: none;*/
+}
+
+.notification-content {
+  background: transparent;
+}
+
+.low {
+  background: @background-alpha;
+}
+
+.notification :hover {
+  /* border: 1px @accent; */
+  background: @background; /* Your hover color */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */ /* Optional: add a 'pop' effect */
+}
+
+.close-button {
+  background: @background-light;
+}
+
+.close-button:hover {
+  background: @accent;
+}
+
+/*
+.notification-row:focus .notification,
+.notification-row:hover .notification {
+  border: 1px solid @accent;
+  color: @background;
+}
+*/
+
+.control-center {
+  border-radius: 0;
+}
+
+.widgets > .widget:hover {
+  border-color: @accent;
+}
+
+.widgets > .widget,
+.widget-mpris > carouselindicatordots,
+.widget-mpris > box > button {
+  background: var(--widget-background);
+  border-radius: var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  border: var(--border);
+}
+
+.control-center-list-placeholder {
+  padding: var(--border-radius);
+}
+
+.notification-group {
+  border-radius: var(--border-radius);
+  padding: 8px;
+  background: transparent;
+}
+
+.widget.widget-mpris {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+.widget.widget-mpris > carouselindicatordots {
+  --dots-padding: 4px;
+  padding: var(--dots-padding);
+  padding-left: var(--dots-padding);
+  padding-right: calc(6px + var(--dots-padding));
+  margin: 0;
+  margin-top: var(--padding);
+}
+.widget-mpris > box > button:hover {
+  background: @accent;
+  color: @background;
+}
+.widget-mpris-player {
+  box-shadow: none;
+  border: var(--border);
+  margin: 0 var(--padding);
+}
+.widget-mpris-player:only-child {
+  margin: 0;
+}
+
+.widget-buttons-grid {
+  halign: center;
+}
+
+/* Container for the grid */
+.widget-buttons-grid > flowbox {
+    padding: 0 10px 0 10px;
+    border-radius: 12px;
+    background: transparent;
+    halign: center;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild {
+  background: transparent;
+}
+
+/* The actual buttons */
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: @background-alpha;
+    border-radius: 12px;
+    margin: 3px;
+    min-height: 50px;
+    min-width: 50px;
+    border: 1px solid @accent;
+    /* box-shadow: none; */
+}
+
+/* Button label text/icon */
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+    font-size: 20px;
+    font-family: "JetBrains Mono Nerd Font", monospace;
+}
+
+/* Hover effect */
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background-color: @accent; /* Accent color (e.g., Red/Pink) */
+    color: @background-alpha;
+}
+
+.widget-volume scale highlight {
+    background-color: @accent;
+    border-radius: 10px; /* Keeps the edges rounded */
+}
+.widget-volume scale backlight {
+  background-color: @background-alpha;
+}
+
+
