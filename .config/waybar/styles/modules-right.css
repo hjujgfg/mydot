@@ -30,6 +30,19 @@
 	padding: 0 6px 0 4px;
 }
 
+#network.wifi,
+#network.ethernet {
+  color: @accent;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.linked {
+  color: @flamingo; 
+}
+
 #custom-vpn {
   padding: 0 6px 0 4px;
   transition: all 0.3s ease;
@@ -57,7 +70,19 @@
 }
 
 #bluetooth {
-	padding: 0 5px;
+	padding: 0 6px 0 4px;
+}
+
+#custom-sshfs {
+  padding: 0 6px 0 4px;
+  transition: all 0.2s ease;
+}
+
+#custom-sshfs:hover {
+  color: @hover-fg;
+}
+#custom-sshfs.connected {
+  color: @accent;
 }
 
 #custom-system_update {

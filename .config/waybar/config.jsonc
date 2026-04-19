@@ -71,7 +71,8 @@
       "network",
       "custom/vpn",
       "custom/tailscale",
-      "bluetooth"
+      "bluetooth",
+      "custom/sshfs"
     ]
   },
 
@@ -396,7 +397,16 @@
 		},
 		"max-length": 1000
 	},
-
+  "custom/sshfs": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/status_sshfs.sh",
+        "interval": 10,
+        "on-click": "hyprctl dispatch exec nautilus ~/mnt/shared",
+        "on-click-right": "~/.config/waybar/scripts/toggle_sshfs.sh",
+        "signal": 8,
+        "tooltip": true
+  },
 	"group/pulseaudio": {
 		"orientation": "horizontal",
 		"modules": [
