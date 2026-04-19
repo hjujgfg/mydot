@@ -1,0 +1,13 @@
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+//@theme "/home/hjujgfg/.local/share/rofi/themes/rounded-nord-dark.rasi"
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+@theme "/home/hjujgfg/.local/share/rofi/themes/hjujgfg_material.rasi"
+configuration {
+	click-to-exit: true;
+	modes: [window,drun,run,ssh,recursivebrowser];
+}
+
