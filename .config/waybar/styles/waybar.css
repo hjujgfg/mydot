@@ -11,7 +11,7 @@
   border-radius: 12px;
   margin: 4px 6px;
   padding: 2px 12px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px; /* Optional: adds depth to the pills */
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 1px 3px; /* Optional: adds depth to the pills */
 }
 
 /* Optional: Highlight specific pills with a different Nord color */

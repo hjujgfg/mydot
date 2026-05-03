@@ -51,6 +51,7 @@
       "clear-all-button": true
     },
     "buttons-grid" : {
+      "buttons-per-row": 5,
       "actions": [
         {
           "label": "",
@@ -63,6 +64,10 @@
         {
           "label": "",
           "command": "swaync-client -t && ~/.config/hypr/scripts/trigger_sleep.sh" 
+        },
+        {
+          "label": "",
+          "command": "swaync-client -t && ~/.config/hypr/scripts/exit_hyprland.sh"
         },
         {
           "label": "",

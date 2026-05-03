@@ -2,6 +2,10 @@
     username
 --------------*/
 
+#custom-trigger {
+  padding: 0 10px;
+}
+
 /*-----------
     power
 -----------*/
@@ -11,8 +15,8 @@
 ----------------*/
 
 #workspaces {
-	padding: 0 1px;
 }
+
 #workspaces button {
 	border-radius: 12px;
 	min-width: 16px;

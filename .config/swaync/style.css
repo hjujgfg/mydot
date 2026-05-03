@@ -107,6 +107,26 @@
   background: transparent;
 }
 
+.widget-dnd switch {
+  background-image: none;
+  border: 1px solid @accent;
+  background-color: @background-light;
+  border-radius: 12px;
+}
+
+.widget-dnd switch slider {
+  background-image: none;
+  border: none;
+  border: 1px solid @accent;
+  background-color: @background-light;
+  border-radius: 12px;
+}
+
+.widget-dnd switch:checked {
+  background-image: none;
+  background-color: @accent;
+}
+
 .widget.widget-mpris {
   background: transparent;
   border-radius: 0;
@@ -135,36 +155,33 @@
 }
 
 .widget-buttons-grid {
-  halign: center;
 }
 
 /* Container for the grid */
 .widget-buttons-grid > flowbox {
-    padding: 0 10px 0 10px;
+    /*padding: 0 10px 0 10px;*/
     border-radius: 12px;
     background: transparent;
-    halign: center;
 }
 
-.widget-buttons-grid > flowbox > flowboxchild {
+.widget-buttons-grid flowbox > flowboxchild {
   background: transparent;
 }
 
 /* The actual buttons */
 .widget-buttons-grid > flowbox > flowboxchild > button {
-    background: @background-alpha;
-    border-radius: 12px;
-    margin: 3px;
-    min-height: 50px;
-    min-width: 50px;
-    border: 1px solid @accent;
-    /* box-shadow: none; */
+  background: @background-alpha;
+  border-radius: 12px;
+  min-height: 50px;
+  border: 1px solid @accent;
+  box-shadow: none;
 }
 
 /* Button label text/icon */
 .widget-buttons-grid > flowbox > flowboxchild > button label {
-    font-size: 20px;
-    font-family: "JetBrains Mono Nerd Font", monospace;
+  font-size: 20px;
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  margin-right: 4px;
 }
 
 /* Hover effect */
