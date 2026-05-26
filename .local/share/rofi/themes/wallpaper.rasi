@@ -1,12 +1,12 @@
 * {
-  main-bg:          #17120FAA;
-  main-bg-no-alpha: #17120F;
-  bg1:              #1F1814;
-  bg2:              #413A31;
-  bg3:              #5E5C5A;
-  accent:           #D6A46C;
-  main-fg:          #868381;
-  fg-inverse:       #413A31;
+  main-bg:          #1D1F21AA;
+  main-bg-no-alpha: #1D1F21;
+  bg1:              #26292C;
+  bg2:              #43382C;
+  bg3:              #616263;
+  accent:           #E4AD62;
+  main-fg:          #8A8C8D;
+  fg-inverse:       #43382C;
 
 	spacing: 0;
 	background-color: transparent;
