@@ -15,6 +15,7 @@ hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("pkill rofi || rofi -show window"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/hypr/scripts/rotate_wallpaper.sh"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("kitty -e ollama run my-gemma4:26b &"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("swaync-client -t"))
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd("~/.config/hypr/scripts/kb_layout_notify.sh"))
 
 -- Focus controls

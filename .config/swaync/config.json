@@ -31,6 +31,7 @@
   "hide-on-clear": true,
   "hide-on-action": true,
   "script-fail-notify": true,
+  "notification-icon-size": 84,
 
   "widgets": [
     "inhibitors",

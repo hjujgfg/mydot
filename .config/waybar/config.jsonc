@@ -163,8 +163,9 @@
 		"persistent-workspaces": {
 			"*": 5
 		},
-		"on-scroll-up": "hyprctl dispatch workspace +1",
-		"on-scroll-down": "hyprctl dispatch workspace -1",
+    "on-click-right": "notify-send \"ehehe\" && hyprctl dispatch 'hl.dsp.focus({ workspace = {id} })'",
+		"on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'",
+		"on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'",
 		"cursor": true
 	},
 	"hyprland/window": {

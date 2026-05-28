@@ -79,6 +79,8 @@ get-icon() {
   #echo "$dev_icon-muted" >> /home/hjujgfg/wb.out
   #echo "$dev_icon-medium" >> /home/hjujgfg/wb.out
   #echo "$dev_icon-high" >> /home/hjujgfg/wb.out
+  # Define the absolute path to the Papirus panel icons
+  local icon_dir="/usr/share/icons/Papirus-Dark/24x24/actions/"
 
   if [[ $state == 'Muted' ]]; then
     icon="$dev_icon-muted"
@@ -93,7 +95,7 @@ get-icon() {
   fi
   #echo "$icon" >> /home/hjujgfg/wb.out
 
-  echo "$icon"
+  echo "$icon_dir/$icon.svg"
 }
 
 toggle-mute() {
