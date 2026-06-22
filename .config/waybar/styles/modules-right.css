@@ -72,6 +72,9 @@
 #bluetooth {
 	padding: 0 6px 0 4px;
 }
+#bluetooth.connected {
+  color: @accent;
+}
 
 #custom-sshfs {
   padding: 0 6px 0 4px;

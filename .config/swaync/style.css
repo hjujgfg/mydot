@@ -180,7 +180,7 @@
 /* Button label text/icon */
 .widget-buttons-grid > flowbox > flowboxchild > button label {
   font-size: 20px;
-  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-family: "SauceCodePro Nerd Font";
   margin-right: 4px;
 }
 
@@ -198,4 +198,10 @@
   background-color: @background-alpha;
 }
 
+
+/* Highlight the currently active audio sink */
+.widget-buttons-grid .toggle:checked {
+    background-color: @accent; /* Adjust this to match your system accent color */
+    border-radius: --border-radius;
+}
 

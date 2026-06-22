@@ -38,6 +38,7 @@
     "buttons-grid",
     "dnd",
     "volume",
+    "buttons-grid#audio",
     "mpris",
     "title",
     "notifications"
@@ -83,6 +84,23 @@
     },
     "dnd": {
       "text": "Do Not Disturb"
+    },
+    "buttons-grid#audio": {
+      "buttons-per-row": 2,
+      "actions": [
+        {
+          "label": "󰥰  Bluetooth",
+          "type": "toggle",
+          "command": "pactl set-default-sink bluez_output.7C_96_D2_F9_11_21.1",
+          "update-command": "pactl get-default-sink | grep -q 'bluez_output.7C_96_D2_F9_11_21.1' && echo true || echo false"
+        },
+        {
+          "label": "󰋎  Wired",
+          "type": "toggle",
+          "command": "pactl set-default-sink alsa_output.usb-Logitech_PRO_X_000000000000-00.iec958-stereo",
+          "update-command": "pactl get-default-sink | grep -q 'alsa_output.usb-Logitech_PRO_X_000000000000-00.iec958-stereo' && echo true || echo false"
+        }
+      ]
     },
     "label": {
       "max-lines": 5,
