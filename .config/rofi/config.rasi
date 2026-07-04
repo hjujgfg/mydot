@@ -10,5 +10,6 @@ configuration {
 	click-to-exit: true;
 	modes: [window,drun,run,ssh,recursivebrowser];
   window-format: "{t}\t[{c}]";
+  font: "hack 12";
 }
 

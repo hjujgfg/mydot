@@ -4,67 +4,67 @@ local colors = require("colors")
 
 -- Window Rules
 hl.window_rule({
-    match = { class = ".*" },
-    suppress_event = "maximize"
+	match = { class = ".*" },
+	suppress_event = "maximize",
 })
 
 hl.window_rule({
-    match = {
-        class = "^$",
-        title = "^$",
-        xwayland = true,
-        float = true,
-        fullscreen = false,
-        pin = false
-    },
-    no_focus = true
+	match = {
+		class = "^$",
+		title = "^$",
+		xwayland = true,
+		float = true,
+		fullscreen = false,
+		pin = false,
+	},
+	no_focus = true,
 })
 
 hl.window_rule({
-    match = { class = "^(org.telegram.desktop)$" },
-    suppress_event = "activate"
+	match = { class = "^(org.telegram.desktop)$" },
+	suppress_event = "activate",
 })
 
 hl.window_rule({
-    match = { class = "^(org.telegram.desktop)$" },
-    workspace = "special:telegram silent"
+	match = { class = "^(org.telegram.desktop)$" },
+	workspace = "special:telegram silent",
 })
 
 hl.window_rule({
-    match = { class = "^(obsidian)$" },
-    workspace = "special:magic silent"
+	match = { class = "^(obsidian)$" },
+	workspace = "special:magic silent",
 })
 
 hl.window_rule({
-    match = { workspace = "special:magic" },
-    border_color = colors.magicBorder
+	match = { workspace = "special:magic" },
+	border_color = colors.magicBorder,
 })
 
 -- Layer Rules
 hl.layer_rule({
-    match = { namespace = "swaync-control-center" },
-    blur = true,
-    ignore_alpha = 0
+	match = { namespace = "swaync-control-center" },
+	blur = true,
+	ignore_alpha = 0,
 })
 
 hl.layer_rule({
-    match = { namespace = "swaync-notification-window" },
-    blur = true,
-    ignore_alpha = 0
+	match = { namespace = "swaync-notification-window" },
+	blur = true,
+	ignore_alpha = 0,
 })
 
 hl.layer_rule({
-    match = { namespace = "rofi" },
-    blur = true
+	match = { namespace = "rofi" },
+	blur = true,
 })
 
 hl.layer_rule({
-    match = { namespace = "waybar" },
-    blur = true
+	match = { namespace = "waybar" },
+	blur = false,
 })
 
 -- Workspace Rules
 hl.workspace_rule({
-    workspace = "name:special:magic",
-    no_shadow = true
+	workspace = "name:special:magic",
+	no_shadow = true,
 })

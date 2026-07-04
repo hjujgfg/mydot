@@ -108,14 +108,14 @@
 }
 
 .widget-dnd switch {
-  background-image: none;
+  /*background-image: none;*/
   border: 1px solid @accent;
-  background-color: @background-light;
-  border-radius: 12px;
+  /*background-color: @background-light;*/
+  /*border-radius: 12px;*/
 }
 
 .widget-dnd switch slider {
-  background-image: none;
+  /*background-image: none;*/
   border: none;
   border: 1px solid @accent;
   background-color: @background-light;
@@ -180,7 +180,7 @@
 /* Button label text/icon */
 .widget-buttons-grid > flowbox > flowboxchild > button label {
   font-size: 20px;
-  font-family: "SauceCodePro Nerd Font";
+  font-family: "Hack Nerd Font";
   margin-right: 4px;
 }
 

@@ -265,7 +265,7 @@
 	},
 
 	"clock#time": {
-		"format": " {:%H:%M}",
+		"format": "  {:%H:%M}",
 		"min-length": 8,
 		"max-length": 8,
 		"tooltip-format": "Standard Time: {:%H:%M:%S}"

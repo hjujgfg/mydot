@@ -32,7 +32,7 @@ hl.config({
 			passes = 2,
 			vibrancy = 0.1696,
 			ignore_opacity = true,
-			special = true,
+			special = false,
 		},
 	},
 	dwindle = {
@@ -43,7 +43,7 @@ hl.config({
 	},
 	misc = {
 		force_default_wallpaper = -1,
-		disable_hyprland_logo = false,
+		disable_hyprland_logo = true,
 	},
 	input = {
 		kb_layout = "us,ru",
