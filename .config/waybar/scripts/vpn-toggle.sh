@@ -1,10 +1,10 @@
 #!/bin/sh
-SERVICE="openvpn-client@ie-62.protonvpn.udp.ovpn.service"
+CONNECTION="vpn-iefull-CHIE"
 
-if sudo /usr/bin/systemctl is-active --quiet "$SERVICE"; then
-  sudo /usr/bin/systemctl stop "$SERVICE"
+if ip link show dev "$CONNECTION"; then
+  nmcli connection down "$CONNECTION"
 else
-  sudo /usr/bin/systemctl start "$SERVICE"
+  nmcli connection up "$CONNECTION"
 fi
 
 pkill -RTMIN+9 waybar

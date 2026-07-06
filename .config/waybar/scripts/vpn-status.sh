@@ -1,8 +1,8 @@
 #!/bin/sh
-SERVICE="openvpn-client@ie-62.protonvpn.udp.ovpn.service"
+CONNECTION="vpn-iefull-CHIE"
 
-if sudo /usr/bin/systemctl is-active --quiet "$SERVICE"; then
-  printf '{"text":"","class":"running","tooltip":"%s running"}' "$SERVICE"
+if ip link show dev "$CONNECTION" >/dev/null 2>&1; then
+  printf '{"text":"","class":"running","tooltip":"%s running"}' "$CONNECTION"
 else
-  printf '{"text":"","class":"stopped","tooltip":"%s stopped"}' "$SERVICE"
+  printf '{"text":"","class":"stopped","tooltip":"%s stopped"}' "$CONNECTION"
 fi
