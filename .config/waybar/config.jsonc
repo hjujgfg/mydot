@@ -71,6 +71,7 @@
       "network",
       "custom/vpn",
       "custom/tailscale",
+      "custom/syncthing",
       "bluetooth",
       "custom/sshfs"
     ]
@@ -331,6 +332,16 @@
     "signal": 9
   },
 
+  "custom/syncthing": {
+    "exec": "$HOME/.config/waybar/scripts/syncthing-status.sh",
+    "return-type": "json",
+    "interval": "once",
+    "format": "{text}",
+    "on-click": "$HOME/.config/waybar/scripts/syncthing-toggle.sh",
+    "on-click-right": "xdg-open http://127.0.0.1:8384",
+    "signal": 10
+  },
+
 	"bluetooth": {
 		"format": "󰂯",
 		"format-disabled": "󰂲",
@@ -559,7 +570,7 @@
     "return-type": "json",
     "interval": 5,
     "format": "{text}",
-    "on-click": "hyprctl dispatch focuswindow class:steam",
+    "on-click": "hyprctl dispatch 'hl.dsp.focus({ window = \"class:steam\" })'",
     "on-click-right": "killall steam"
   },
 
@@ -568,7 +579,7 @@
     "return-type": "json",
     "interval": 5,
     "format": "{text}",
-    "on-click": "hyprctl dispatch focuswindow class:org.telegram.desktop",
+    "on-click": "hyprctl dispatch 'hl.dsp.focus({ window = \"class:org.telegram.desktop\" })'",
     "on-click-right": "killall Telegram"
   },
 

@@ -1,9 +1,9 @@
 -- Theme and color definitions for Hyprland
 
 local colors = {
-    accentColor = "rgba(D6A46Cee)",
-    magicBorder = "rgba(ffff00aa)",
-    inactiveBorder = "rgba(595959aa)"
+	accentColor = "rgba(ACB9B2ff)",
+	magicBorder = "rgba(ffff00aa)",
+	inactiveBorder = "rgba(ACB9B222)",
 }
 
 return colors

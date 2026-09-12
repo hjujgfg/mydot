@@ -31,6 +31,11 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	match = { class = "^(org.telegram.desktop)$" },
+	opacity = "0.9",
+})
+
+hl.window_rule({
 	match = { class = "^(obsidian)$" },
 	workspace = "special:magic silent",
 })

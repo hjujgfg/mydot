@@ -17,6 +17,12 @@ hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("kitty -e ollama run my-gemma4:26b &"
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd("~/.config/hypr/scripts/kb_layout_notify.sh"))
+hl.bind(
+	mainMod .. " + G",
+	hl.dsp.exec_cmd(
+		"pkill rofi || rofi -modi clipboard:~/.config/rofi/scripts/cliphist-rofi-img -show clipboard -show-icons"
+	)
+)
 
 -- Focus controls
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "l" }))
@@ -45,6 +51,7 @@ end
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 hl.bind(mainMod .. " + T", hl.dsp.workspace.toggle_special("telegram"))
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.window.move({ workspace = "special:telegram" }))
 
 -- DPMS controls
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.dpms({ action = "disable" }))
