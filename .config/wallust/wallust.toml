@@ -11,6 +11,7 @@ waybar = { src = "waybar-colors.css", dst = '~/.config/waybar/wallpaper.css' }
 rofi = { src = "rofi-colors.rasi", dst = '~/.local/share/rofi/themes/wallpaper.rasi' }
 hyprland = { src = "hyprland-colors.conf", dst = '~/.config/hypr/hyprland-colors.conf' }
 swaync = { src = "swaync-colors.css", dst = '~/.config/swaync/swaync-colors.css' }
+chromium = { src = "chromium-colors.json", dst = '~/.config/chromium/wallust-theme/manifest.json' }
 # Define the Rofi entry
 # [[entry]]
 # template = "rofi-colors.rasi"
