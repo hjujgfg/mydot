@@ -1,56 +1,30 @@
-/*-----------
-    hover
------------*/
-
-#custom-trigger:hover,
-#idle_inhibitor:hover,
-#clock.date:hover,
-#network:hover,
-#bluetooth:hover,
-#custom-system_update:hover,
-#mpris:hover,
-#pulseaudio:hover,
-#wireplumber:hover {
-	color: @hover-fg;
-}
-
-/*--------------
-    disabled
----------------*/
-
-#idle_inhibitor.deactivated,
-#mpris.paused,
-#pulseaudio.output.muted,
-#pulseaudio.input.source-muted,
-#wireplumber.muted {
-	color: @hover-fg;
-}
-
-/*-------------
-    warning
--------------*/
-
+/* State Alert Rules (Warning -> Amber Underline + Tint; Critical -> Red Underline + Tint) */
 #memory.warning,
 #cpu.warning,
 #battery.warning {
-	color: @warning;
+  background-color: rgba(245, 158, 11, 0.12);
+  border-bottom: 2px solid @hazard-amber;
 }
 
-/*--------------
-    critical
---------------*/
+#memory.warning label,
+#cpu.warning label,
+#battery.warning label {
+  color: #c26500;
+  font-weight: 800;
+}
 
 #temperature.critical,
 #memory.critical,
 #cpu.critical,
 #battery.critical {
-	color: @critical;
+  background-color: rgba(230, 57, 70, 0.12);
+  border-bottom: 2px solid @hazard-red;
 }
 
-/*--------------
-    charging
---------------*/
-
-#battery.charging {
-	color: @charging;
+#temperature.critical label,
+#memory.critical label,
+#cpu.critical label,
+#battery.critical label {
+  color: @hazard-red;
+  font-weight: 900;
 }

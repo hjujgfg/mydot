@@ -1,207 +1,345 @@
-/*
-@define-color background rgb(46, 52, 64);
-@define-color background-alpha rgba(46, 52, 64, 0.8);
-@define-color background-light rgba(59, 66, 82, 1);
-@define-color accent rgb(137, 220, 235); 
-*/
 @import "swaync-colors.css";
 
+* {
+  font-family: "0xProto Nerd Font Mono", "Hack Nerd Font", monospace;
+}
+
 :root {
-  --border-radius: 22px;
-  --cc-bg: transparent;
+  --border-radius: 2px;
+}
 
-  --widget-background: @background-alpha;
-  --noti-bg-alpha: 0.6;
+/* ========================================================
+   CONTROL CENTER (SLIDE-OUT DIAGNOSTIC PANEL)
+   ======================================================== */
+.control-center {
+  background-color: rgba(11, 14, 20, 0.88);
+  border-left: 2px solid @chassis-edge;
+  border-bottom: 2px solid @chassis-edge;
+  border-radius: 2px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  padding: 12px;
+}
 
-  --padding: calc(var(--border-radius) / 2);
+/* Section Widgets */
+.widgets > .widget {
+  background: rgba(18, 22, 32, 0.75);
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.widgets > .widget:hover {
+  border-color: @ink-secondary;
+}
+
+/* Title / Header */
+.widget-title {
+  color: @ink-primary;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.widget-title > button {
+  background: @chassis-surface;
+  color: @ink-secondary;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.widget-title > button:hover {
+  background: @hazard-orange;
+  color: #0e1116;
+  border-color: @hazard-orange;
+}
+
+/* ========================================================
+   POWER & ACTION BUTTONS GRID
+   ======================================================== */
+.widget-buttons-grid {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.widget-buttons-grid > flowbox {
+  background: transparent;
+}
+
+.widget-buttons-grid flowbox > flowboxchild {
+  padding: 3px;
+}
+
+.widget-buttons-grid flowbox > flowboxchild > button {
+  background: @chassis-pure;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  min-height: 44px;
+  min-width: 44px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.1s ease-in-out;
+}
+
+.widget-buttons-grid flowbox > flowboxchild > button label {
+  font-size: 18px;
+  color: @ink-primary;
+}
+
+.widget-buttons-grid flowbox > flowboxchild > button:hover {
+  background-color: @hazard-orange;
+  border-color: @hazard-orange;
+}
+
+.widget-buttons-grid flowbox > flowboxchild > button:hover label {
+  color: #0e1116;
+}
+
+/* Audio Output Selector Toggles */
+.widget-buttons-grid .toggle {
+  background: @chassis-pure;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  padding: 6px 12px;
+  transition: all 0.1s ease;
+}
+
+.widget-buttons-grid .toggle label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: @ink-secondary;
+}
+
+.widget-buttons-grid .toggle:checked {
+  background-color: rgba(255, 85, 0, 0.1);
+  border: 1px solid @hazard-orange;
+  border-bottom: 2px solid @hazard-orange;
+}
+
+.widget-buttons-grid .toggle:checked label {
+  color: @hazard-orange;
+  font-weight: 800;
+}
+
+/* ========================================================
+   DO NOT DISTURB (TOGGLE SWITCH)
+   ======================================================== */
+.widget-dnd,
+.widget-dnd label {
+  color: @ink-primary;
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.widget-dnd switch {
+  background-color: @chassis-surface;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+}
+
+.widget-dnd switch slider {
+  background-color: @chassis-pure;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+}
+
+.widget-dnd switch:checked {
+  background-color: @hazard-orange;
+  border-color: @hazard-orange;
+}
+
+.widget-dnd switch:checked slider {
+  background-color: #0e1116;
+  border-color: #0e1116;
+}
+
+/* ========================================================
+   VOLUME SLIDER
+   ======================================================== */
+.widget-volume {
+  color: @ink-primary;
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.widget-volume scale trough {
+  background-color: @chassis-surface;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  min-height: 8px;
+}
+
+.widget-volume scale highlight {
+  background-color: @hazard-orange;
+  border-radius: 1px;
+}
+
+.widget-volume scale slider {
+  background-color: @ink-primary;
+  border: 1px solid @ink-primary;
+  border-radius: 2px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+/* ========================================================
+   MPRIS MEDIA CARD
+   ======================================================== */
+.widget-mpris {
+  background: @chassis-pure;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.widget-mpris-player {
+  background: transparent;
+  color: @ink-primary;
+}
+
+.widget-mpris-title {
+  font-weight: 800;
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.widget-mpris-subtitle {
+  font-weight: 600;
+  font-size: 12px;
+  color: #e2e8f0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.widget-mpris-player .mpris-overlay > box > button {
+  color: #ffffff;
+}
+
+.widget-mpris-player .mpris-overlay > box > button:hover {
+  background-color: @hazard-orange;
+  color: #0e1116;
+}
+
+.widget-mpris > box > button {
+  background: @chassis-surface;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  color: @ink-primary;
+  padding: 4px 8px;
+}
+
+.widget-mpris > box > button:hover {
+  background: @hazard-orange;
+  color: #0e1116;
+  border-color: @hazard-orange;
+}
+
+/* ========================================================
+   NOTIFICATION TOASTS & CARDS
+   ======================================================== */
+.notification-row {
+  background: transparent;
+  outline: none;
+}
+
+.notification-background {
+  background: transparent;
+}
+
+.control-center .control-center-list {
+  background: transparent;
 }
 
 .notification {
-  background: @background-alpha;
+  background: rgba(18, 22, 32, 0.88);
+  border: 1px solid @chassis-border;
+  border-left: 4px solid @hazard-orange;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  margin: 6px 0;
+  padding: 10px 12px;
   transition: all 0.15s ease-in-out;
 }
 
-/* kb-layout stuff does not seem to work! */
-.notification.kb-layout {
-  background: @accent;
+.notification:hover {
+  border-color: @ink-secondary;
+  border-left: 4px solid @hazard-orange;
 }
 
-/* 1. Target the specific notification class */
-.notification-content.kb-layout {
-    /* Override standard width settings */
-    min-width: 0px; 
-    /* width: auto; */
-    
-    /* Make it a small square/circle */
-    padding: 10px;
-    border-radius: 12px; /* Or 50% for a circle */
-    
-    /* Center the contents */
-    /* display: flex;
-    align-items: center;
-    justify-content: center;*/
-}
-
-/* 2. Hide the text elements inside THIS notification only */
-.notification-content.kb-layout .summary,
-.notification-content.kb-layout .body,
-.notification-content.kb-layout .time,
-.notification-content.kb-layout .close-button {
-    /*display: none;*/
+.notification.critical {
+  border-left: 4px solid @hazard-red;
+  background-color: rgba(230, 57, 70, 0.04);
 }
 
 .notification-content {
   background: transparent;
+  padding: 2px;
 }
 
-.low {
-  background: @background-alpha;
+/* Ensure icons and images are crisp with full opacity and no GTK dimming filter */
+.notification-content image,
+.notification-content .image,
+.notification-content .app-icon,
+.notification image {
+  -gtk-icon-filter: none;
+  filter: none;
+  opacity: 1;
 }
 
-.notification :hover {
-  /* border: 1px @accent; */
-  background: @background; /* Your hover color */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */ /* Optional: add a 'pop' effect */
+.notification-content .summary {
+  font-size: 14px;
+  font-weight: 800;
+  color: @ink-primary;
+}
+
+.notification-content .body {
+  font-size: 13px;
+  font-weight: 500;
+  color: @ink-secondary;
+  margin-top: 4px;
+}
+
+.notification-content .time {
+  font-size: 11px;
+  font-weight: 600;
+  color: @ink-dim;
+}
+
+/* Notification Progress Bar (Volume, Brightness, Transfers) */
+progressbar {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 6px;
+}
+
+progressbar trough {
+  background-color: @chassis-surface;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  min-height: 8px;
+}
+
+progressbar progress {
+  background-color: @hazard-orange;
+  border-radius: 1px;
+  min-height: 8px;
 }
 
 .close-button {
-  background: @background-light;
+  background: @chassis-surface;
+  color: @ink-secondary;
+  border: 1px solid @chassis-border;
+  border-radius: 2px;
+  padding: 2px 6px;
 }
 
 .close-button:hover {
-  background: @accent;
+  background: @hazard-red;
+  color: #ffffff;
+  border-color: @hazard-red;
 }
-
-/*
-.notification-row:focus .notification,
-.notification-row:hover .notification {
-  border: 1px solid @accent;
-  color: @background;
-}
-*/
-
-.control-center {
-  border-radius: 0;
-}
-
-.widgets > .widget:hover {
-  border-color: @accent;
-}
-
-.widgets > .widget,
-.widget-mpris > carouselindicatordots,
-.widget-mpris > box > button {
-  background: var(--widget-background);
-  border-radius: var(--border-radius);
-  padding: calc(var(--border-radius) / 2);
-  border: var(--border);
-}
-
-.control-center-list-placeholder {
-  padding: var(--border-radius);
-}
-
-.notification-group {
-  border-radius: var(--border-radius);
-  padding: 8px;
-  background: transparent;
-}
-
-.widget-dnd switch {
-  /*background-image: none;*/
-  border: 1px solid @accent;
-  /*background-color: @background-light;*/
-  /*border-radius: 12px;*/
-}
-
-.widget-dnd switch slider {
-  /*background-image: none;*/
-  border: none;
-  border: 1px solid @accent;
-  background-color: @background-light;
-  border-radius: 12px;
-}
-
-.widget-dnd switch:checked {
-  background-image: none;
-  background-color: @accent;
-}
-
-.widget.widget-mpris {
-  background: transparent;
-  border-radius: 0;
-  padding: 0;
-  border: none;
-}
-.widget.widget-mpris > carouselindicatordots {
-  --dots-padding: 4px;
-  padding: var(--dots-padding);
-  padding-left: var(--dots-padding);
-  padding-right: calc(6px + var(--dots-padding));
-  margin: 0;
-  margin-top: var(--padding);
-}
-.widget-mpris > box > button:hover {
-  background: @accent;
-  color: @background;
-}
-.widget-mpris-player {
-  box-shadow: none;
-  border: var(--border);
-  margin: 0 var(--padding);
-}
-.widget-mpris-player:only-child {
-  margin: 0;
-}
-
-.widget-buttons-grid {
-}
-
-/* Container for the grid */
-.widget-buttons-grid > flowbox {
-    /*padding: 0 10px 0 10px;*/
-    border-radius: 12px;
-    background: transparent;
-}
-
-.widget-buttons-grid flowbox > flowboxchild {
-  background: transparent;
-}
-
-/* The actual buttons */
-.widget-buttons-grid > flowbox > flowboxchild > button {
-  background: @background-alpha;
-  border-radius: 12px;
-  min-height: 50px;
-  border: 1px solid @accent;
-  box-shadow: none;
-}
-
-/* Button label text/icon */
-.widget-buttons-grid > flowbox > flowboxchild > button label {
-  font-size: 20px;
-  font-family: "Hack Nerd Font";
-  margin-right: 4px;
-}
-
-/* Hover effect */
-.widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    background-color: @accent; /* Accent color (e.g., Red/Pink) */
-    color: @background-alpha;
-}
-
-.widget-volume scale highlight {
-    background-color: @accent;
-    border-radius: 10px; /* Keeps the edges rounded */
-}
-.widget-volume scale backlight {
-  background-color: @background-alpha;
-}
-
-
-/* Highlight the currently active audio sink */
-.widget-buttons-grid .toggle:checked {
-    background-color: @accent; /* Adjust this to match your system accent color */
-    border-radius: --border-radius;
-}
-

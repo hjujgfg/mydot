@@ -1,42 +1,30 @@
 * {
-	font-family: "Hack Nerd Font"; /*0xProto Nerd Font"*/
-	font-weight: bold;
-	font-size: 16px;
-	color: @main-fg;
+  font-family: "0xProto Nerd Font Mono", "Hack Nerd Font", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  color: @ink-primary;
+}
+
+#custom-trigger,
+#workspaces button,
+#group-hardware,
+#window,
+#group-center,
+#group-connections,
+#group-pulseaudio,
+#group-apps,
+#custom-mouse,
+#custom-system_update,
+#custom-notification {
+  font-size: 15px;
 }
 
 #custom-user,
 #window label,
-#mpris,
-tooltip label {
-	font-weight: normal;
+#mpris {
+  font-weight: 500;
 }
 
-#workspaces button.active label,
-#custom-distro {
-	font-size: 22px;
-}
-
-#custom-power_menu {
-	font-size: 19px;
-}
-
-/*--------------
-    dividers
---------------*/
-
-#custom-left_div,
-#custom-left_inv,
-#custom-right_div,
-#custom-right_inv {
-	font-size: 22px;
-}
-
-/* ... */
-.module,
-#custom-left_div,
-#custom-left_inv,
-#custom-right_div,
-#custom-right_inv {
-	margin-bottom: -1px;
+.module {
+  margin-bottom: 0;
 }

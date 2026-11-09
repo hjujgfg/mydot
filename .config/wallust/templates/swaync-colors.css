@@ -1,5 +1,20 @@
-@define-color background {{color1}};
-@define-color background-alpha rgba({{color1 | rgb}}, 0.8);
-@define-color background-light {{color9}};
-@define-color accent {{color14}};
+/* ========================================================
+   INDUSTRIAL DIEGETIC SWAYNC COLOR PALETTE (WALLUST)
+   ======================================================== */
 
+@define-color chassis-base        {{color0}};
+@define-color chassis-pure        #121620;
+@define-color chassis-surface     #181e2b;
+@define-color chassis-border      {{color8}};
+@define-color chassis-edge        #2b3548;
+@define-color chassis-dark-plate  #07090d;
+
+@define-color ink-primary         {{color7}};
+@define-color ink-secondary       {{color6}};
+@define-color ink-dim             #475569;
+
+@define-color hazard-orange       {{color14}};
+@define-color hazard-amber        {{color3}};
+@define-color hazard-red          {{color1}};
+@define-color hazard-green        {{color2}};
+@define-color hazard-cyan         {{color4}};

@@ -1,80 +1,42 @@
-/* importing wallust generated ones */
-@import "wallpaper.css";
-/*@import "experimental.css";*/
-/* catppuccin-mocha */
+/* ========================================================
+   INDUSTRIAL AVIONICS DIEGETIC THEME (WALLUST GENERATED)
+   ======================================================== */
 
-@define-color rosewater     #f5e0dc;
-@define-color flamingo      #f2cdcd;
-@define-color pink          #f5c2e7;
-@define-color mauve         #cba6f7;
-@define-color red           #f38ba8;
-@define-color maroon        #eba0ac;
-@define-color peach         #fab387;
-@define-color yellow        #f9e2af;
-@define-color green         #a6e3a1;
-@define-color teal          #94e2d5;
-@define-color sky           #89dceb;
-@define-color sapphire      #74c7ec;
-@define-color blue          #89b4fa;
-@define-color lavender      #b4befe;
-@define-color text          @wallpaper_text; /*#cdd6f4*/
-@define-color subtext1      #bac2de;
-@define-color subtext0      #a6adc8;
-@define-color overlay2      #9399b2;
-@define-color overlay1      #7f849c;
-@define-color overlay0      #6c7086;
-@define-color surface2      #585b70;
-@define-color surface1      #45475a;
-@define-color surface0      #313244;
-@define-color base          #1e1e2e;
-@define-color mantle        #181825;
-@define-color crust         #11111b;
+@define-color chassis-base        #0B0E14;
+@define-color chassis-pure        #121620;
+@define-color chassis-surface     #181e2b;
+@define-color chassis-border      #1E2533;
+@define-color chassis-edge        #2b3548;
+@define-color chassis-dark-plate  #07090d;
 
-/*from Nord*/
-@define-color nord0         #2e3440;
-@define-color nord1         #3b4252;
-@define-color nord2         #434c5e;
-@define-color nord3         #4c566a;
-@define-color nordaccent    #ebcb8b;
+@define-color ink-primary         #E2E8F0;
+@define-color ink-secondary       #FF7847;
+@define-color ink-dim             #475569;
 
+@define-color hazard-orange       #FF5500;
+@define-color hazard-amber        #F59E0B;
+@define-color hazard-red          #E63946;
+@define-color hazard-green        #10B981;
+@define-color hazard-cyan         #FF6B2B;
 
-/*
-	br - border
-	bg - background
-	fg - foreground
-*/
+@define-color main-bg             @chassis-base;
+@define-color main-fg             @ink-primary;
+@define-color main-br             @chassis-border;
+@define-color panel-border        @chassis-border;
+@define-color panel-edge          @chassis-edge;
+@define-color accent              @hazard-orange;
+@define-color hover-bg            @chassis-surface;
+@define-color hover-fg            @hazard-orange;
 
-/* main colors */
-/*prev: sky*/
-@define-color accent        @wallpaper_accent;
-@define-color main-br       @subtext0;
-/*nord0*/
-@define-color main-bg       @wallpaper_dark0;
+@define-color bg-one              @chassis-base;
+@define-color bg-two              @chassis-surface;
+@define-color bg-three            @chassis-pure;
 
-@define-color bg-one        @wallpaper_dark1;
-@define-color bg-two        @wallpaper_dark2;
-@define-color bg-three      @wallpaper_dark3;
-@define-color main-fg       @text; /*it was text*/
-@define-color hover-bg      @base;
-@define-color hover-fg      alpha(@main-fg, 0.75);
-@define-color outline       shade(@main-bg, 0.5);
+@define-color text                @ink-primary;
+@define-color subtext0            @ink-secondary;
+@define-color subtext1            @ink-secondary;
+@define-color overlay0            @ink-dim;
 
-/* module colors */
-
-@define-color workspaces    @bg-one;
-@define-color temperature   @bg-one;
-@define-color memory        @bg-two;
-@define-color cpu           @bg-two;
-@define-color time          @bg-three;
-@define-color date          @bg-two;
-@define-color tray          @bg-one;
-@define-color volume        @bg-one;
-@define-color backlight     @bg-two;
-@define-color battery       @bg-three;
-@define-color apps          @bg-two;
-
-/* state colors */
-
-@define-color warning       @yellow;
-@define-color critical      @red;
-@define-color charging      @green;
+@define-color warning             @hazard-amber;
+@define-color critical            @hazard-red;
+@define-color charging            @hazard-green;

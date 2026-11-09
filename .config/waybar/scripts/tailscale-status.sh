@@ -22,19 +22,19 @@ EOF
     )
     tooltip_escaped=$(printf '%s' "$tooltip" | sed ':a;N;$!ba;s/\n/\\n/g; s/"/\\"/g')
 
-    printf '{"text": "󰖂", "class":"up", "tooltip":"%s"}' "$tooltip_escaped"
+    printf '{"text": "TS", "class":"up", "tooltip":"%s"}' "$tooltip_escaped"
     #printf '{"text":"󰖂","class":"up","tooltip":"Tailscale: UP\nIP: %s\n\n%s\n\nLeft click: down"}' "$ip" "$st"
   else
-    printf '{"text": "󰖂", "class":"down", "tooltip": "Tailscale DOWN"}'
+    printf '{"text": "TS", "class":"down", "tooltip": "Tailscale DOWN"}'
     #printf '{"text":"󰖂","class":"down","tooltip":"Tailscale: DOWN\n\nLeft click: up"}'
   fi
 else
   if svc_enabled; then
 
-    printf '{"text": "󰖂"}'
+    printf '{"text": "TS"}'
     #printf '{"text":"󰖂","class":"down","tooltip":"Tailscale service stopped\n\nLeft click: start"}'
   else
-    printf '{"text": "󰖂"}'
+    printf '{"text": "TS"}'
     #printf '{"text":"󰖂","class":"disabled","tooltip":"Tailscale service disabled\n\nEnable service to use"}'
   fi
 fi

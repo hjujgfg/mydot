@@ -52,10 +52,12 @@ hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 hl.bind(mainMod .. " + T", hl.dsp.workspace.toggle_special("telegram"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.window.move({ workspace = "special:telegram" }))
+hl.bind(mainMod .. " + L", hl.dsp.workspace.toggle_special("localSend"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ workspace = "special:localSend" }))
 
 -- DPMS controls
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.dpms({ action = "disable" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.dpms({ action = "enable" }))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.dpms({ action = "disable" }))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.dpms({ action = "enable" }))
 
 -- Workspace mouse scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))

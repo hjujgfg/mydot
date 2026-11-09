@@ -1,22 +1,22 @@
-#waybar {
-  background-color: transparent;
-  border: none;
+window#waybar {
+  background-color: rgba(11, 14, 20, 0.88);
+  border-bottom: 1px solid rgba(255, 85, 0, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  color: @ink-primary;
 }
 
-/* This targets all top-level modules and groups to turn them into pills */
+/* Individual top-level modules & groups */
 .modules-left > widget > *,
 .modules-center > widget > *,
 .modules-right > widget > * {
-  background-color: @main-bg;
-  border-radius: 12px;
-  margin: 4px 6px;
-  padding: 2px 12px;
-  box-shadow: rgba(0, 0, 0, 0.8) 2px 1px 3px; /* Optional: adds depth to the pills */
-}
-
-/* Optional: Highlight specific pills with a different Nord color */
-.modules-center > widget > * {
-  background-color: @bg-one; 
+  background-color: transparent;
+  color: @ink-primary;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 /* Clean up internal spacing for grouped modules */
@@ -25,13 +25,55 @@ box > widget {
   padding: 0;
 }
 
-
+/* ========================================================
+   DIAGNOSTIC TELEMETRY TOOLTIP (SPEC SHEET / DATA CARD)
+   ======================================================== */
 tooltip {
-  border: 2px solid @bg-two;
-  border-radius: 10px;
-  background-color: @main-bg;
+  background-color: #0e121a;
+  border: 1px solid #252e3e;
+  border-top: 2px solid @hazard-orange;
+  border-radius: 2px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  padding: 6px 10px;
+}
+
+tooltip label {
+  font-family: "0xProto Nerd Font Mono", "Hack Nerd Font", monospace;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #e2e8f0;
 }
 
 tooltip > box {
-  padding: 4px 8px;
+  padding: 4px 6px;
+}
+
+/* Calendar widget within tooltip */
+tooltip calendar {
+  background-color: #0e121a;
+  color: #e2e8f0;
+  border: none;
+  padding: 6px;
+  font-family: "0xProto Nerd Font Mono", "Hack Nerd Font", monospace;
+  font-size: 13px;
+}
+
+tooltip calendar:selected,
+.calendar-today {
+  background-color: @hazard-orange;
+  color: #07090d;
+  font-weight: 900;
+}
+
+tooltip calendar.header {
+  color: @hazard-orange;
+  font-weight: 800;
+}
+
+tooltip calendar.button {
+  color: #e2e8f0;
+}
+
+tooltip calendar:indeterminate {
+  color: #475569;
 }

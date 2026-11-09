@@ -1,13 +1,17 @@
 * {
-  main-bg:          {{color1}}AA;
-  main-bg-no-alpha: {{color1}};
-  bg1:              {{color9}};
-  bg2:              {{color0}};
-  bg3:              {{color8}};
+  main-bg:          {{color0}}F0;
+  main-bg-no-alpha: {{color0}};
+  bg-pure:          #121620;
+  border-color:     {{color8}};
+  border-dark:      #2b3548;
   accent:           {{color14}};
+  accent-tint:      rgba({{color14 | rgb}}, 0.16);
   main-fg:          {{color7}};
-  fg-inverse:       {{color0}};
+  fg-muted:         {{color6}};
+  fg-inverse:       #0b0e14;
+  alert-red:        {{color1}};
+  alert-amber:      {{color3}};
 
-	spacing: 0;
-	background-color: transparent;
+  spacing: 0;
+  background-color: transparent;
 }

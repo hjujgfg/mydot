@@ -45,7 +45,13 @@ hl.window_rule({
 	border_color = colors.magicBorder,
 })
 
+hl.window_rule({
+	match = { class = "^(org.localsend.localsend_app)$" },
+	workspace = "special:localSend silent",
+})
+
 -- Layer Rules
+
 hl.layer_rule({
 	match = { namespace = "swaync-control-center" },
 	blur = true,

@@ -50,9 +50,9 @@ display-module() {
 	local total=$((REPO + AUR))
 
 	if ((total == 0)); then
-		echo "{ \"text\": \"󰸟\", \"tooltip\": \"No updates available\" }"
+		echo "{ \"text\": \"UPD 0\", \"tooltip\": \"No updates available\" }"
 	else
-		echo "{ \"text\": \"\", \"tooltip\": \"$tooltip\" }"
+		echo "{ \"text\": \"UPD $total\", \"class\": \"has-updates\", \"tooltip\": \"$tooltip\" }"
 	fi
 }
 

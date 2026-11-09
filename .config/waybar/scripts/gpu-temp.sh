@@ -13,4 +13,4 @@ class="gpu-cool"
 [ "$temp" -ge 60 ] && class="gpu-warm"
 [ "$temp" -ge 75 ] && class="gpu-hot"
 
-printf '{"text":"󱃃%s°C","class":"%s","tooltip":"GPU temperature: %s°C"}' "$temp" "$class" "$temp"
+printf '{"text":"GPU.T %s°C","class":"%s","tooltip":"GPU temperature: %s°C"}' "$temp" "$class" "$temp"

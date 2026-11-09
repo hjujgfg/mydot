@@ -15,4 +15,4 @@ ram2="$(readtemp /sys/class/hwmon/hwmon8/temp1_input)"
 
 tooltip="CPU: ${cpu}°C\nGPU edge: ${gpu_edge}°C\nGPU hotspot: ${gpu_hot}°C\nNVMe0: ${nvme0}°C\nNVMe1: ${nvme1}°C\nNVMe2: ${nvme2}°C\nRAM1: ${ram1}°C\nRAM2: ${ram2}°C"
 
-printf '{"text":" %s°C","tooltip":"%s"}' "$cpu" "$tooltip"
+printf '{"text":"CPU.T %s°C","tooltip":"%s"}' "$cpu" "$tooltip"

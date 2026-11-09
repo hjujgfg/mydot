@@ -1,119 +1,176 @@
-
+/* ========================================================
+   INDUSTRIAL DIEGETIC ROFI THEME (PRAGMATA / TEENAGE ENG)
+   ======================================================== */
 
 @import "./wallpaper.rasi"
 
 window {
-	transparency: "real";
-	// background-color: #263238CC; /*base00 + CC (80% opacity)*/
-	background-color: @main-bg;
-	border-radius: 12px;
-	border: 0px;
-
+    transparency: "real";
+    background-color: @main-bg;
+    border: 2px;
+    border-color: @border-dark;
+    border-radius: 2px;
+    width: 680px;
+    padding: 0px;
 }
 
 mainbox {
-	children: [inputbar, message, mode-switcher, listview];
-	spacing: 30px;
-	padding: 30px 0;
-	border-radius: 12px;
-	border: 1px;
-	border-color: @accent;
+    background-color: transparent;
+    children: [inputbar, message, mode-switcher, listview];
+    spacing: 16px;
+    padding: 24px;
+    border: 0px;
 }
 
+/* ========================================================
+   INPUTBAR / DIAGNOSTIC COMMAND PROMPT
+   ======================================================== */
 inputbar {
-	padding: 0 30px;
-	children: [prompt, textbox-prompt-colon, entry, case-indicator];
+    background-color: @bg-pure;
+    border: 1px 1px 1px 4px;
+    border-color: @accent;
+    border-radius: 2px;
+    padding: 10px 14px;
+    spacing: 8px;
+    children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
 prompt {
-	text-color: @main-fg;
+    font: "0xProto Nerd Font Mono Bold 13";
+    text-color: @accent;
 }
 
 textbox-prompt-colon {
-	expand: false;
-	str: ":";
-	margin: 0 1ch 0 0;
-	text-color: @main-bg;
+    expand: false;
+    str: " //";
+    text-color: @accent;
+    font: "0xProto Nerd Font Mono Bold 13";
 }
 
 entry {
-	text-color: @main-fg;
+    font: "0xProto Nerd Font Mono 13";
+    text-color: @main-fg;
+    placeholder: "enter query or telemetry tag...";
+    placeholder-color: @fg-muted;
 }
 
 case-indicator {
-	text-color: @accent;
+    text-color: @accent;
 }
 
-mode-switcher, message {
-	border: 1px 0;
-	border-color: @main-bg;
-  border-radius: 12px;
+/* ========================================================
+   MODE SWITCHER (TACTILE TABS)
+   ======================================================== */
+mode-switcher {
+    spacing: 8px;
+    background-color: transparent;
+    border: 0px;
+    padding: 2px 2px 8px 2px;
+    margin: 0px 0px 8px 0px;
 }
 
-button, textbox {
-	background-color: @main-bg;
-	text-color: @main-fg;
-	padding: 5px;
+button {
+    background-color: @bg-pure;
+    text-color: @fg-muted;
+    border: 1px 1px 2px 1px;
+    border-color: @border-color;
+    border-radius: 2px;
+    padding: 6px 14px;
+    font: "0xProto Nerd Font Mono 12";
 }
 
 button selected {
-	background-color: @accent;
-  text-color: @fg-inverse;
+    background-color: @accent-tint;
+    text-color: @accent;
+    border: 1px 1px 3px 1px;
+    border-color: @accent;
+    font: "0xProto Nerd Font Mono Bold 12";
 }
 
+/* ========================================================
+   LISTVIEW & ELEMENT CASSETTES
+   ======================================================== */
 listview {
-	scrollbar: true;
-	margin: 0 10px 0 30px;
+    background-color: transparent;
+    scrollbar: true;
+    lines: 8;
+    columns: 1;
+    spacing: 6px;
+    margin: 4px 0px 0px 0px;
+    cycle: true;
 }
 
 scrollbar {
-	background-color: @accent;
-	handle-color: @main-bg;
-	handle-width: 10px;
-	border: 0 1px;
-	border-color: @main-bg;
-	margin: 0 0 0 20px;
+    background-color: @border-color;
+    handle-color: @accent;
+    handle-width: 4px;
+    border-radius: 2px;
+    margin: 0px 0px 0px 8px;
 }
 
 element {
-	padding: 5px;
-	spacing: 5px;
-	highlight: bold underline;
-	children: [element-icon, element-text];
-}
-element-text, element-icon {
-	background-color : inherit;
-	text-color	     : inherit;
-	foreground-color : inherit;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 2px;
+    padding: 8px 12px;
+    spacing: 12px;
+    children: [element-icon, element-text];
 }
 
-element normal {
-	background-color: transparent;
+element-icon {
+    size: 24px;
+    background-color: transparent;
 }
 
+element-text {
+    background-color: transparent;
+    text-color: @main-fg;
+    font: "0xProto Nerd Font Mono 13";
+    vertical-align: 0.5;
+}
+
+/* Selected Item: Left Hazard Indicator + Amber/Orange Tint */
 element selected {
-	background-color: @accent;
-	border-radius: 12px;
-  text-color: @fg-inverse;
+    background-color: @accent-tint;
+    border: 1px 1px 1px 4px;
+    border-color: @accent;
+    border-radius: 2px;
 }
 
-element selected active {
-    text-color: @fg-inverse;
-  }
-
-element alternate {
-	/*background-color: @base03;*/
+element selected element-text {
+    text-color: @accent;
+    font: "0xProto Nerd Font Mono Bold 13";
 }
 
-element normal normal, element alternate normal {
-	text-color: @main-fg;
+element normal normal,
+element alternate normal {
+    background-color: transparent;
+    text-color: @main-fg;
 }
 
-element normal urgent, element selected urgent, element alternate urgent {
-	text-color: @accent;
+element normal urgent,
+element alternate urgent {
+    background-color: rgba(230, 57, 70, 0.1);
+    border: 0px 0px 0px 4px;
+    border-color: @alert-red;
 }
 
-element normal active, element alternate active {
-	text-color: @accent;
+element normal active,
+element alternate active {
+    background-color: @accent-tint;
+    border: 0px 0px 0px 4px;
+    border-color: @accent;
 }
 
+/* Message / Error overlay */
+message {
+    background-color: @bg-pure;
+    border: 1px;
+    border-color: @border-color;
+    border-radius: 2px;
+    padding: 8px;
+}
+
+textbox {
+    text-color: @main-fg;
+}

@@ -1,157 +1,270 @@
 /*----------------
-    media info
+    MPRIS
 ----------------*/
-
 #mpris {
-	padding: 0 12px;
+  padding: 0 10px;
 }
 
-/*------------
-    volume
-------------*/
-
-#custom-left_div.6 {
-	color: @volume;
-}
-#pulseaudio,
-#wireplumber {
+#mpris label {
+  color: @ink-secondary;
 }
 
-/*----------------
-    brightness
-----------------*/
+#mpris.playing,
+#mpris.playing label {
+  color: @hazard-orange;
+  font-weight: 800;
+}
 
+#mpris.paused,
+#mpris.paused label {
+  color: @ink-dim;
+}
 
 /*-----------------
-    system tray
+    Connections Bay
 -----------------*/
+#connections,
+#group-connections {
+  border: none;
+}
 
 #network {
-	padding: 0 6px 0 4px;
+  padding: 0 6px;
+  border-left: 1px solid @chassis-border;
+  border-right: 1px solid @chassis-border;
 }
 
-#network.wifi,
-#network.ethernet {
-  color: @accent;
-}
-
-#network.disconnected {
-  color: @red;
-}
-
-#network.linked {
-  color: @flamingo; 
-}
-
-#custom-vpn {
-  padding: 0 6px 0 4px;
-  transition: all 0.3s ease;
-}
-
-#custom-vpn:hover label {
-  /*box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);*/
-  color: @hover-fg;
-}
-
-#custom-vpn.running label {
-  color: @accent;
-}
-
-#custom-tailscale {
-  padding: 0 6px 0 4px;
-}
-
-#custom-tailscale:hover label {
-  color: @hover-fg;
-}
-
-#custom-tailscale.up label {
-  color: @accent;
-}
-
-#custom-syncthing {
-  padding: 0 2px 0 4px;
-}
-
-#custom-syncthing:hover label {
-  color: @hover-fg;
-}
-
-#custom-syncthing.up label {
-  color: @accent;
-}
-
+#custom-vpn,
+#custom-tailscale,
+#custom-syncthing,
 #bluetooth {
-	padding: 0 6px 0 4px;
-}
-#bluetooth.connected {
-  color: @accent;
+  padding: 0 6px;
+  border-right: 1px solid @chassis-border;
 }
 
 #custom-sshfs {
-  padding: 0 6px 0 4px;
-  transition: all 0.2s ease;
+  padding: 0 6px;
+  border-right: 1px solid @chassis-border;
 }
 
-#custom-sshfs:hover label {
-  color: @hover-fg;
-}
-#custom-sshfs.connected label {
-  color: @accent;
-}
-
-#custom-system_update {
-	padding: 0 8px 0 2px;
+#network label,
+#custom-vpn label,
+#custom-tailscale label,
+#custom-syncthing label,
+#bluetooth label,
+#custom-sshfs label {
+  color: @ink-primary;
 }
 
-/*-------------
-    battery
--------------*/
-
-#battery {
-	background-color: @battery;
+/* Active State -> Foreground Accent */
+#network.ethernet,
+#network.ethernet label,
+#network.wifi,
+#network.wifi label,
+#custom-vpn.running,
+#custom-vpn.running label,
+#custom-tailscale.up,
+#custom-tailscale.up label,
+#custom-syncthing.up,
+#custom-syncthing.up label,
+#custom-sshfs.connected,
+#custom-sshfs.connected label,
+#bluetooth.connected,
+#bluetooth.connected label {
+  color: @hazard-orange;
+  font-weight: 800;
 }
 
-/*---------------------------
-    Apps (steam and other)
- --------------------------*/
-#custom-telegram {
-  padding-left: 6px;
-  padding-right: 6px;
+/* Inactive State -> Dimmed */
+#custom-vpn.stopped,
+#custom-vpn.stopped label,
+#custom-tailscale.down,
+#custom-tailscale.down label,
+#custom-syncthing.down,
+#custom-syncthing.down label,
+#custom-sshfs.disconnected,
+#custom-sshfs.disconnected label,
+#bluetooth.disabled,
+#bluetooth.disabled label,
+#bluetooth.off,
+#bluetooth.off label {
+  color: @ink-dim;
 }
 
-#custom-telegram.running label {
-  color: @accent;
+/* Error / Disconnected -> Red underline + tint */
+#network.disconnected {
+  background-color: rgba(230, 57, 70, 0.12);
+  border-bottom: 2px solid @hazard-red;
 }
 
+#network.disconnected label {
+  color: @hazard-red;
+  font-weight: 800;
+}
+
+/*-----------------
+    PulseAudio Bay
+-----------------*/
+#group-pulseaudio {
+  border: none;
+}
+
+#pulseaudio {
+  padding: 0 10px;
+  border-right: 1px solid @chassis-border;
+  border-bottom: 2px solid transparent;
+}
+
+#pulseaudio label {
+  color: @ink-primary;
+}
+
+#pulseaudio.muted,
+#pulseaudio.output.muted,
+#pulseaudio.input.source-muted {
+  background-color: rgba(230, 57, 70, 0.12);
+  border-bottom: 2px solid @hazard-red;
+}
+
+#pulseaudio.muted label,
+#pulseaudio.output.muted label,
+#pulseaudio.input.source-muted label {
+  color: @hazard-red;
+  font-weight: 800;
+}
+
+/*-----------------
+    Apps Bay
+-----------------*/
+#apps,
+#group-apps {
+  border: none;
+}
+
+#custom-telegram,
 #custom-ollama {
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
-#custom-ollama.running label {
-  color: @accent;
+  padding: 0 6px;
+  border-right: 1px solid @chassis-border;
 }
 
 #custom-steam {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 0 10px 0 6px;
+  border-right: 1px solid @chassis-border;
 }
 
+#custom-telegram label,
+#custom-ollama label,
+#custom-steam label {
+  color: @ink-primary;
+}
+
+/* Running Apps -> Foreground Accent */
+#custom-telegram.running,
+#custom-telegram.running label,
+#custom-ollama.running,
+#custom-ollama.running label,
+#custom-steam.running,
 #custom-steam.running label {
-  color: @accent;
+  color: @hazard-orange;
+  font-weight: 800;
 }
 
-/*----------------
-    power menu
-----------------*/
-
-
-#custom-power_menu {
-	border-radius: 16px;
-	padding: 0 19px 0 16px;
-	color: @accent;
+#custom-telegram.stopped label,
+#custom-ollama.stopped label,
+#custom-steam.stopped label {
+  color: @ink-dim;
 }
-#custom-power_menu:hover {
-	background-color: @hover-bg;
+
+/*-----------------
+    Mouse (Peripherals)
+-----------------*/
+#custom-mouse {
+  padding: 0 10px;
+  border-right: 1px solid @chassis-border;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+
+#custom-mouse.disconnected {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 0;
+  opacity: 0;
+}
+
+#custom-mouse label {
+  color: @ink-primary;
+}
+
+/* Mouse Warning (Amber underline + slight tint) */
+#custom-mouse.warning {
+  background-color: rgba(245, 158, 11, 0.12);
+  border-bottom: 2px solid @hazard-amber;
+}
+
+#custom-mouse.warning label {
+  color: #c26500;
+  font-weight: 800;
+}
+
+/* Mouse Critical (Red underline + slight tint) */
+#custom-mouse.critical {
+  background-color: rgba(230, 57, 70, 0.12);
+  border-bottom: 2px solid @hazard-red;
+}
+
+#custom-mouse.critical label {
+  color: @hazard-red;
+  font-weight: 800;
+}
+
+/*-----------------
+    Updates & Notifications
+-----------------*/
+#custom-system_update {
+  padding: 0 10px;
+  border-right: 1px solid @chassis-border;
+  border-bottom: 2px solid transparent;
+  font-weight: 800;
+  transition: all 0.15s ease;
+}
+
+#custom-system_update label {
+  color: @ink-primary;
+}
+
+/* Update Warning (Amber underline + slight tint) */
+#custom-system_update.has-updates {
+  background-color: rgba(245, 158, 11, 0.12);
+  border-bottom: 2px solid @hazard-amber;
+}
+
+#custom-system_update.has-updates label {
+  color: #c26500;
+  font-weight: 800;
+}
+
+#custom-notification {
+  padding: 0 10px;
+  border-bottom: 2px solid transparent;
+  font-weight: 800;
+  transition: all 0.15s ease;
+}
+
+#custom-notification label {
+  color: @ink-primary;
+}
+
+/* Notification Warning (Amber underline + slight tint) */
+#custom-notification.notification {
+  background-color: rgba(245, 158, 11, 0.12);
+  border-bottom: 2px solid @hazard-amber;
+}
+
+#custom-notification.notification label {
+  color: #c26500;
+  font-weight: 800;
 }

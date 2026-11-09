@@ -79,8 +79,9 @@ get-icon() {
   #echo "$dev_icon-muted" >> /home/hjujgfg/wb.out
   #echo "$dev_icon-medium" >> /home/hjujgfg/wb.out
   #echo "$dev_icon-high" >> /home/hjujgfg/wb.out
-  # Define the absolute path to the Papirus panel icons
-  local icon_dir="/usr/share/icons/Papirus-Dark/24x24/actions/"
+  # Define the absolute path to the Papirus icons (Papirus-Dark for night cockpit contrast)
+  local icon_dir="/usr/share/icons/Papirus-Dark/24x24/actions"
+  [[ $dev_icon == 'mic-volume' ]] && icon_dir="/usr/share/icons/Papirus-Dark/24x24/panel"
 
   if [[ $state == 'Muted' ]]; then
     icon="$dev_icon-muted"

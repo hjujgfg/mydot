@@ -1,13 +1,17 @@
 * {
-  main-bg:          #0C1521AA;
-  main-bg-no-alpha: #0C1521;
-  bg1:              #101C2C;
-  bg2:              #3F3D3D;
-  bg3:              #595D63;
-  accent:           #DDD6D1;
-  main-fg:          #7F858D;
-  fg-inverse:       #3F3D3D;
+  main-bg:          #0B0E14F0;
+  main-bg-no-alpha: #0B0E14;
+  bg-pure:          #121620;
+  border-color:     #1E2533;
+  border-dark:      #2b3548;
+  accent:           #FF5500;
+  accent-tint:      rgba(255,85,0, 0.16);
+  main-fg:          #E2E8F0;
+  fg-muted:         #FF7847;
+  fg-inverse:       #0b0e14;
+  alert-red:        #E63946;
+  alert-amber:      #F59E0B;
 
-	spacing: 0;
-	background-color: transparent;
+  spacing: 0;
+  background-color: transparent;
 }

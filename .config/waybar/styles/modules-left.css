@@ -1,76 +1,122 @@
 /*--------------
-    username
+    trigger / menu
 --------------*/
-
 #custom-trigger {
   padding: 0 10px;
+  border-right: 1px solid @chassis-border;
 }
 
-/*-----------
-    power
------------*/
+#custom-trigger label {
+  font-weight: 900;
+  color: @hazard-orange;
+}
+
+#custom-trigger:hover {
+  background-color: @hazard-orange;
+}
+
+#custom-trigger:hover label {
+  color: #0e1116;
+}
 
 /*----------------
     workspaces
 ----------------*/
-
 #workspaces {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+  border-right: 1px solid @chassis-border;
 }
 
 #workspaces button {
-	border-radius: 12px;
-	min-width: 16px;
-	padding: 0 10px;
-}
-#workspaces button:hover {
-	background-color: @accent;
-	color: @hover-fg;
-}
-#workspaces button.active label {
-	color: @accent;
+  border-radius: 0;
+  min-width: 26px;
+  padding: 0 10px;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s ease-in-out;
 }
 
-/* The main container */
-#group-peripherals {
+#workspaces button label {
+  color: @ink-secondary;
+}
+
+#workspaces button:hover {
+  background-color: @chassis-surface;
+}
+
+#workspaces button:hover label {
+  color: @ink-primary;
+}
+
+#workspaces button.active {
+  background-color: rgba(255, 85, 0, 0.16);
+  border-bottom: 2px solid @hazard-orange;
+}
+
+#workspaces button.active label {
+  color: @hazard-orange;
+  font-weight: 900;
+}
+
+#workspaces button.urgent {
+  background-color: @hazard-red;
+}
+
+#workspaces button.urgent label {
+  color: #ffffff;
 }
 
 /*-----------------
-    temperature
+    hardware bay
 -----------------*/
-
-#custom-temps {
-  padding-left: 6px;
-  padding-right: 6px;
+#hardware,
+#group-hardware {
+  border: none;
 }
 
-/*---------------------
-    gpu temperature
-----------------------*/
+#cpu, #memory, #custom-temps {
+  padding: 0 8px;
+  border-right: 1px solid @chassis-border;
+}
 
 #custom-gpu_temperature {
-  border-radius: 12px;
+  padding: 0 8px;
+  border-right: 1px solid @chassis-border;
 }
 
-#custom-gpu_temperature.gpu-cool  { color: @text; }  /* green */
-#custom-gpu_temperature.gpu-warm  { color: @yellow; }  /* yellow */
-#custom-gpu_temperature.gpu-hot   { color: @red; }  /* red */
-#custom-gpu_temperature.gpu-unknown { opacity: 0.5; }
-
-/*------------
-    memory
-------------*/
-
-#memory {
+#custom-gpu_temperature.gpu-cool label {
+  color: @ink-primary;
 }
 
-/*---------
-    cpu
----------*/
-
-#cpu {
+#custom-gpu_temperature.gpu-warm {
+  background-color: @hazard-amber;
+  border-radius: 2px;
 }
 
-/*------------------
+#custom-gpu_temperature.gpu-warm label {
+  color: #0e1116;
+}
+
+#custom-gpu_temperature.gpu-hot {
+  background-color: @hazard-red;
+  border-radius: 2px;
+}
+
+#custom-gpu_temperature.gpu-hot label {
+  color: #ffffff;
+}
+
+/*-----------------
     window title
-------------------*/
+-----------------*/
+#window {
+  padding: 0 14px;
+}
 
+#window label {
+  color: @ink-primary;
+}

@@ -1,73 +1,54 @@
 /*------------------
-    window count
+    Center Bay (Language + Clock)
 ------------------*/
 
-#windowcount {
-	margin-right: 12px;
-  padding-left: 70px; /* this is to keep the center icon in the center */
-}
-#windowcount label {
-	color: @hover-fg;
-}
-
-
-/*-----------------
-    distro icon
------------------*/
-
-#custom-distro {
-	padding: 0 10px 0 5px;
-	background-color: @accent;
-	color: @main-bg;
-}
-
-/*--------------------
-    idle inhibitor
---------------------*/
-
-#idle_inhibitor {
-	background-color: @time;
-}
-
-/*----------
-    time
-----------*/
-
-#clock.time {
-}
-
-
-/*----------
-    date
-----------*/
-
-#clock.date {
-}
-
-/*------------------
-    Keyboard layout
- * ---------------*/
-
-#language {
-  padding-left: 6px;
-}
-
-#language.en {
-  color: @accent;
-}
-
-#language:hover {
-  color: @hover-fg;
+#center,
+#group-center {
+  border: none;
 }
 
 #custom-language {
+  padding: 0 10px;
+  border-left: 1px solid @chassis-border;
+  border-right: 1px solid @chassis-border;
 }
 
-#custom-language.ru {
-  color: @red;
+#custom-language.ru label {
+  color: @hazard-orange;
 }
 
-#custom-language.en {
-  color: @accent;
+/*
+#custom-language.en label {
+  color: @hazard-orange;
+}
+*/
+
+#custom-language label {
+  font-weight: 800;
+  /* color: @ink-primary; */
 }
 
+#clock.time {
+  padding: 0 10px;
+  border-right: 1px solid @chassis-border;
+}
+
+#clock.time label {
+  font-weight: 800;
+  color: @ink-primary;
+}
+
+#clock.date {
+  padding: 0 10px;
+  border-right: 1px solid @chassis-border;
+}
+
+#clock.date label {
+  font-weight: 700;
+  color: @ink-secondary;
+}
+
+#clock.time:hover label,
+#clock.date:hover label {
+  color: @hazard-orange;
+}

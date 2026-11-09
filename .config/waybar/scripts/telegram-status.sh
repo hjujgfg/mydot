@@ -12,7 +12,7 @@ for n in $names; do
 done
 
 if [ -n "$running" ]; then
-  printf '{"text":"","class":"running","tooltip":"Telegram running (%s)"}' "$running"
+  printf '{"text":"TG","class":"running","tooltip":"Telegram running (%s)"}' "$running"
 else
   printf '{"text":"","class":"stopped","tooltip":"Telegram not running"}'
 fi

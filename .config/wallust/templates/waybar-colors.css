@@ -1,6 +1,42 @@
-@define-color wallpaper_accent {{color14}};
-@define-color wallpaper_text   {{color7}};
-@define-color wallpaper_dark0  {{color1}};
-@define-color wallpaper_dark1  {{color9}};
-@define-color wallpaper_dark2  {{color0}};
-@define-color wallpaper_dark3  {{color8}};
+/* ========================================================
+   INDUSTRIAL AVIONICS DIEGETIC THEME (WALLUST GENERATED)
+   ======================================================== */
+
+@define-color chassis-base        {{color0}};
+@define-color chassis-pure        #121620;
+@define-color chassis-surface     #181e2b;
+@define-color chassis-border      {{color8}};
+@define-color chassis-edge        #2b3548;
+@define-color chassis-dark-plate  #07090d;
+
+@define-color ink-primary         {{color7}};
+@define-color ink-secondary       {{color6}};
+@define-color ink-dim             #475569;
+
+@define-color hazard-orange       {{color14}};
+@define-color hazard-amber        {{color3}};
+@define-color hazard-red          {{color1}};
+@define-color hazard-green        {{color2}};
+@define-color hazard-cyan         {{color4}};
+
+@define-color main-bg             @chassis-base;
+@define-color main-fg             @ink-primary;
+@define-color main-br             @chassis-border;
+@define-color panel-border        @chassis-border;
+@define-color panel-edge          @chassis-edge;
+@define-color accent              @hazard-orange;
+@define-color hover-bg            @chassis-surface;
+@define-color hover-fg            @hazard-orange;
+
+@define-color bg-one              @chassis-base;
+@define-color bg-two              @chassis-surface;
+@define-color bg-three            @chassis-pure;
+
+@define-color text                @ink-primary;
+@define-color subtext0            @ink-secondary;
+@define-color subtext1            @ink-secondary;
+@define-color overlay0            @ink-dim;
+
+@define-color warning             @hazard-amber;
+@define-color critical            @hazard-red;
+@define-color charging            @hazard-green;
