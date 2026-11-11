@@ -139,7 +139,7 @@
 #group-pulseaudio {
   border: none;
   margin: 10px;
-  background-color: @hazard-red;
+  /*background-color: @hazard-red;*/
 }
 
 #pulseaudio {

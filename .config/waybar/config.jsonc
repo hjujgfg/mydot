@@ -252,7 +252,7 @@
   },
 
   "clock#date": {
-    "format": "{:%d.%m.%Y}",
+    "format": "{:%a %d.%m.%Y}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month",
@@ -260,9 +260,9 @@
       "first-day-of-week": 1,
       "format": {
         "months": "<span color='#ff5500'><b>{}</b></span>",
-        "days": "<span color='#0f1217'>{}</span>",
-        "weekdays": "<span color='#596273'><b>{}</b></span>",
-        "today": "<span background='#ff5500' color='#ffffff'><b>{}</b></span>",
+        "days": "<span color='#e2e8f0'>{}</span>",
+        "weekdays": "<span color='#64748b'><b>{}</b></span>",
+        "today": "<span background='#ff5500' color='#07090d'><b>{}</b></span>",
       },
     },
     "actions": {
