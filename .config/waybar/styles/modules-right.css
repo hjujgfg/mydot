@@ -56,6 +56,31 @@
   color: @ink-primary;
 }
 
+#network:hover,
+#custom-vpn:hover,
+#custom-tailscale:hover,
+#custom-syncthing:hover,
+#bluetooth:hover,
+#custom-sshfs:hover,
+#pulseaudio:hover,
+#custom-apps_label:hover,
+#mpris:hover,
+#custom-telegram:hover,
+#custom-steam:hover,
+#custom-llm:hover {
+  background-color: @chassis-surface;
+  border-bottom: 2px solid @hazard-red;
+}
+
+#network:hover label,
+#custom-vpn:hover label,
+#custom-tailscale:hover label,
+#custom-syncthing:hover label,
+#bluetooth:hover label,
+#custom-sshfs:hover label {
+  color: @ink-primary;
+}
+
 /* Active State -> Foreground Accent */
 #network.ethernet,
 #network.ethernet label,
@@ -91,6 +116,12 @@
   color: @ink-dim;
 }
 
+/* Bluetooth Enabled but Disconnected (Standby) */
+#bluetooth.on,
+#bluetooth.on label {
+  color: @ink-secondary;
+}
+
 /* Error / Disconnected -> Red underline + tint */
 #network.disconnected {
   background-color: rgba(230, 57, 70, 0.12);
@@ -107,12 +138,13 @@
 -----------------*/
 #group-pulseaudio {
   border: none;
+  margin: 10px;
+  background-color: @hazard-red;
 }
 
 #pulseaudio {
+  border: none;
   padding: 0 10px;
-  border-right: 1px solid @chassis-border;
-  border-bottom: 2px solid transparent;
 }
 
 #pulseaudio label {
@@ -138,17 +170,30 @@
 -----------------*/
 #apps,
 #group-apps {
-  border: none;
+  border-left: 1px solid @chassis-border;
+}
+
+#custom-apps_label {
+  padding: 0 10px;
+  border-right: 1px solid @chassis-border;
+  color: @ink-secondary;
+  font-weight: 800;
+  transition: all 0.15s ease;
+}
+
+#custom-apps_label:hover {
+  background-color: @chassis-surface;
+  color: @hazard-orange;
 }
 
 #custom-telegram,
 #custom-ollama {
-  padding: 0 6px;
+  padding: 0 8px;
   border-right: 1px solid @chassis-border;
 }
 
 #custom-steam {
-  padding: 0 10px 0 6px;
+  padding: 0 8px;
   border-right: 1px solid @chassis-border;
 }
 
@@ -173,52 +218,6 @@
 #custom-ollama.stopped label,
 #custom-steam.stopped label {
   color: @ink-dim;
-}
-
-/*-----------------
-    Mouse (Peripherals)
------------------*/
-#custom-mouse {
-  padding: 0 10px;
-  border-right: 1px solid @chassis-border;
-  border-bottom: 2px solid transparent;
-  transition: all 0.15s ease;
-}
-
-#custom-mouse.disconnected {
-  min-width: 0;
-  min-height: 0;
-  padding: 0;
-  margin: 0;
-  border: none;
-  font-size: 0;
-  opacity: 0;
-}
-
-#custom-mouse label {
-  color: @ink-primary;
-}
-
-/* Mouse Warning (Amber underline + slight tint) */
-#custom-mouse.warning {
-  background-color: rgba(245, 158, 11, 0.12);
-  border-bottom: 2px solid @hazard-amber;
-}
-
-#custom-mouse.warning label {
-  color: #c26500;
-  font-weight: 800;
-}
-
-/* Mouse Critical (Red underline + slight tint) */
-#custom-mouse.critical {
-  background-color: rgba(230, 57, 70, 0.12);
-  border-bottom: 2px solid @hazard-red;
-}
-
-#custom-mouse.critical label {
-  color: @hazard-red;
-  font-weight: 800;
 }
 
 /*-----------------

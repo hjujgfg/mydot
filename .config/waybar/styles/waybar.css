@@ -50,8 +50,10 @@ tooltip > box {
 
 /* Calendar widget within tooltip */
 tooltip calendar {
-  background-color: #0e121a;
-  color: #e2e8f0;
+  /*background-color: #0e121a;*/
+  background-color: #ffffff;
+  /*color: #e2e8f0;*/
+  color: #07090d;
   border: none;
   padding: 6px;
   font-family: "0xProto Nerd Font Mono", "Hack Nerd Font", monospace;

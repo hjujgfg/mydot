@@ -9,8 +9,8 @@
 
 #custom-language {
   padding: 0 10px;
-  border-left: 1px solid @chassis-border;
-  border-right: 1px solid @chassis-border;
+  border-left: none;
+  border-right: none;
 }
 
 #custom-language.ru label {
@@ -30,6 +30,7 @@
 
 #clock.time {
   padding: 0 10px;
+  border-left: 1px solid @chassis-border;
   border-right: 1px solid @chassis-border;
 }
 
@@ -40,7 +41,7 @@
 
 #clock.date {
   padding: 0 10px;
-  border-right: 1px solid @chassis-border;
+  border-right: none;
 }
 
 #clock.date label {

@@ -45,8 +45,6 @@
     "group/connections",
     "group/pulseaudio",
     "group/apps",
-    "custom/mouse",
-    "custom/system_update",
     "custom/notification",
   ],
 
@@ -57,14 +55,13 @@
 
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["cpu", "memory", "custom/temps", "custom/gpu_temperature"],
+    "modules": ["cpu", "memory", "custom/temps", "custom/gpu_temperature", "custom/mouse"],
   },
 
   "group/connections": {
     "orientation": "horizontal",
     "modules": [
       "network",
-      "custom/vpn",
       "custom/tailscale",
       "custom/syncthing",
       "bluetooth",
@@ -74,7 +71,11 @@
 
   "group/apps": {
     "orientation": "horizontal",
-    "modules": ["custom/telegram", "custom/ollama", "custom/steam"],
+    "modules": ["custom/apps_label", "custom/telegram", "custom/ollama", "custom/steam"],
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false,
+    },
   },
   // "layer": "top",
   // "output":
@@ -272,14 +273,14 @@
   "network": {
     "interval": 5,
     "format": "NET // DISC",
-    "format-ethernet": "ETH // UP",
+    "format-ethernet": "ETH",
     "format-wifi": "WIFI {signalStrength}%",
     "format-disconnected": "NET // DISC",
     "format-disabled": "NET // OFF",
     "on-click": "kitty -e ~/.config/waybar/scripts/network.sh",
     "on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -r 1125",
     "tooltip-format": "Gateway: {gwaddr}",
-    "tooltip-format-ethernet": "Interface: {ifname}",
+    "tooltip-format-ethernet": "Interface: {ifname} (Ethernet)",
     "tooltip-format-wifi": "Network: {essid}\nIP Addr: {ipaddr}/{cidr}\nStrength: {signalStrength}%\nFrequency: {frequency} GHz",
     "tooltip-format-disconnected": "Wi-Fi Disconnected",
     "tooltip-format-disabled": "Wi-Fi Disabled",
@@ -361,8 +362,8 @@
 	-------------------*/
 
   "mpris": {
-    "format": "PLAY // {title} - {artist}",
-    "format-paused": "PAUSE // {title} - {artist}",
+    "format": "PLAYING // {title} - {artist}",
+    "format-paused": "PAUSED // {title} - {artist}",
     "tooltip-format": "Playing: {title} - {artist}",
     "tooltip-format-paused": "Paused: {title} - {artist}",
     "max-length": 32,
@@ -495,6 +496,11 @@
     "format": "󰤄",
     "on-click": "kitty -e ~/.config/waybar/scripts/power-menu.sh",
     "tooltip-format": "Power Menu",
+  },
+
+  "custom/apps_label": {
+    "format": "APPS",
+    "tooltip": false,
   },
 
   "custom/ollama": {
