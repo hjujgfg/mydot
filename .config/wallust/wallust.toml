@@ -12,3 +12,4 @@ hyprland = { src = "hyprland-colors.conf", dst = '~/.config/hypr/hyprland-colors
 rofi = { src = "rofi-colors.rasi", dst = '~/.local/share/rofi/themes/wallpaper.rasi' }
 chromium = { src = "chromium-colors.json", dst = '~/.config/chromium/wallust-theme/manifest.json' }
 kitty = { src = "kitty-colors.conf", dst = '~/.config/kitty/colors.conf' }
+nvim = { src = "nvim-colors.lua", dst = '~/.config/nvim/lua/config/colors.lua' }

@@ -12,7 +12,7 @@
   "control-center-width": 500,
   "control-center-height": -1,
   "fit-to-screen": false,
-  "layer-shell-cover-screen": false,
+  "layer-shell-cover-screen": true,
 
   "layer-shell": true,
   "layer": "overlay",
@@ -52,7 +52,7 @@
       "button-text": "Clear All",
       "clear-all-button": true
     },
-    "buttons-grid" : {
+    "buttons-grid": {
       "buttons-per-row": 5,
       "actions": [
         {
@@ -65,7 +65,7 @@
         },
         {
           "label": "",
-          "command": "swaync-client -t && ~/.config/hypr/scripts/trigger_sleep.sh" 
+          "command": "swaync-client -t && ~/.config/hypr/scripts/trigger_sleep.sh"
         },
         {
           "label": "",

@@ -3,6 +3,7 @@
    ======================================================== */
 
 @define-color chassis-base        #0B0E14;
+@define-color chassis-base-alpha  #rgba(11, 14, 20, 0.8);
 @define-color chassis-pure        #121620;
 @define-color chassis-surface     #181e2b;
 @define-color chassis-border      #1E2533;

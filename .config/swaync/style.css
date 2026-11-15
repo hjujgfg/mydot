@@ -5,6 +5,8 @@
 }
 
 :root {
+  --cc-bg: #rgba(11, 14, 20, 0.8);
+  --noti-bg-alpha: 0.9;
   --border-radius: 2px;
 }
 
@@ -12,7 +14,8 @@
    CONTROL CENTER (SLIDE-OUT DIAGNOSTIC PANEL)
    ======================================================== */
 .control-center {
-  background-color: rgba(11, 14, 20, 0.88);
+  /*backdrop-filter: blur(28px);*/
+  background: @chassis-base-alpha;
   border-left: 2px solid @chassis-edge;
   border-bottom: 2px solid @chassis-edge;
   border-radius: 2px;
@@ -247,15 +250,12 @@
 }
 
 .notification-background {
-  background: transparent;
-}
-
-.control-center .control-center-list {
-  background: transparent;
+  backdrop-filter: blur(28px);
 }
 
 .notification {
-  background: rgba(18, 22, 32, 0.88);
+  backdrop-filter: blur(28px);
+  background: @chassis-base-alpha;
   border: 1px solid @chassis-border;
   border-left: 4px solid @hazard-orange;
   border-radius: 2px;
