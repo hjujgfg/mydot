@@ -7,7 +7,7 @@ local colors = {
 	chassisBase = "rgba(0B0E14ff)",
 	chassisBorder = "rgba(1E2533ff)",
 	inactiveBorder = "rgba(1E2533aa)",
-	magicBorder = "rgba(F59E0Bee)",
+	magicBorder = "rgba(FF5500ff)",
 }
 
 return colors

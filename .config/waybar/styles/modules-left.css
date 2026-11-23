@@ -1,21 +1,21 @@
 /*--------------
-    trigger / menu
+    systemcontrol / menu
 --------------*/
-#custom-trigger {
+#custom-systemcontrol {
   padding: 0 10px;
   border-right: 1px solid @chassis-border;
 }
 
-#custom-trigger label {
+#custom-systemcontrol label {
   font-weight: 900;
   color: @hazard-orange;
 }
 
-#custom-trigger:hover {
+#custom-systemcontrol:hover {
   background-color: @hazard-orange;
 }
 
-#custom-trigger:hover label {
+#custom-systemcontrol:hover label {
   color: #0e1116;
 }
 
@@ -78,7 +78,9 @@
   border: none;
 }
 
-#cpu, #memory, #custom-temps {
+#cpu,
+#memory,
+#custom-temps {
   padding: 0 8px;
   border-right: 1px solid @chassis-border;
 }

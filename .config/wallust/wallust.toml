@@ -6,10 +6,11 @@ palette = "harddark16"
 
 [templates]
 waybar = { src = "waybar-colors.css", dst = '~/.config/waybar/theme.css' }
-swaync = { src = "swaync-colors.css", dst = '~/.config/swaync/swaync-colors.css' }
+mako = { src = "mako-config", dst = '~/.config/mako/config' }
 hypr_lua = { src = "colors.lua", dst = '~/.config/hypr/colors.lua' }
 hyprland = { src = "hyprland-colors.conf", dst = '~/.config/hypr/hyprland-colors.conf' }
 rofi = { src = "rofi-colors.rasi", dst = '~/.local/share/rofi/themes/wallpaper.rasi' }
 chromium = { src = "chromium-colors.json", dst = '~/.config/chromium/wallust-theme/manifest.json' }
 kitty = { src = "kitty-colors.conf", dst = '~/.config/kitty/colors.conf' }
 nvim = { src = "nvim-colors.lua", dst = '~/.config/nvim/lua/config/colors.lua' }
+obsidian = { src = "obsidian-theme.css", dst = '~/obsidian/My/.obsidian/themes/Deep Basalt Avionics/theme.css' }

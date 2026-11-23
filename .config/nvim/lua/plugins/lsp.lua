@@ -30,8 +30,18 @@ return {
         },
         lua_ls = {},
         bashls = {},
-        jsonls = {},
-        cssls = {},
+        jsonls = {
+          settings = {
+            json = {
+              schemas = {
+                {
+                  fileMatch = { "*.jsonc" },
+                  allowTrailingCommas = true,
+                },
+              },
+            },
+          },
+        },
         marksman = {},
       },
       setup = {
@@ -55,7 +65,6 @@ return {
         "lua-language-server",
         "bash-language-server",
         "json-lsp",
-        "css-lsp",
         "marksman",
         "stylua",
         "shfmt",

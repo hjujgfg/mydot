@@ -45,7 +45,6 @@
     "group/connections",
     "group/pulseaudio",
     "group/apps",
-    "custom/notification",
   ],
 
   "group/center": {
@@ -55,7 +54,13 @@
 
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["cpu", "memory", "custom/temps", "custom/gpu_temperature", "custom/mouse"],
+    "modules": [
+      "cpu",
+      "memory",
+      "custom/temps",
+      "custom/gpu_temperature",
+      "custom/mouse",
+    ],
   },
 
   "group/connections": {
@@ -71,7 +76,12 @@
 
   "group/apps": {
     "orientation": "horizontal",
-    "modules": ["custom/apps_label", "custom/telegram", "custom/ollama", "custom/steam"],
+    "modules": [
+      "custom/apps_label",
+      "custom/telegram",
+      "custom/ollama",
+      "custom/steam",
+    ],
     "drawer": {
       "transition-duration": 300,
       "transition-left-to-right": false,
@@ -110,13 +120,17 @@
 
   "group/user": {
     "orientation": "horizontal",
-    "modules": ["custom/trigger"],
-    "drawer": {},
+    "modules": ["custom/systemcontrol"],
   },
-  "custom/trigger": {
+  "custom/systemcontrol": {
     "format": "SYS //",
     "tooltip": false,
-    "on-click": "pkill rofi || rofi -show drun",
+    "on-click": "pkill rofi || ~/.config/rofi/scripts/powermenu.sh",
+  },
+  "custom/powercontrol": {
+    "format": "PWR //",
+    "tooltip": false,
+    "on-click": "pkill rofi || ~/.config/rofi/scripts/powermenu.sh",
   },
   "custom/user": {
     "exec": "id -un",
@@ -501,6 +515,7 @@
   "custom/apps_label": {
     "format": "APPS",
     "tooltip": false,
+    "on-click": "pkill rofi || rofi -show drun",
   },
 
   "custom/ollama": {
@@ -528,27 +543,6 @@
     "format": "{text}",
     "on-click": "hyprctl dispatch 'hl.dsp.focus({ window = \"class:org.telegram.desktop\" })'",
     "on-click-right": "killall Telegram",
-  },
-
-  "custom/notification": {
-    "tooltip": true,
-    "format": "NOTIF {icon}",
-    "format-icons": {
-      "notification": "[!]",
-      "none": "[0]",
-      "dnd-notification": "[DND!]",
-      "dnd-none": "[DND]",
-      "inhibited-notification": "[INH!]",
-      "inhibited-none": "[INH]",
-      "dnd-inhibited-notification": "[DND!]",
-      "dnd-inhibited-none": "[DND]",
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true,
   },
 
   /*-------------------
